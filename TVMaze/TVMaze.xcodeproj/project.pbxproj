@@ -59,6 +59,9 @@
 		ADFF0CB3268DD841006246F1 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CB2268DD841006246F1 /* GeneratedMocks.swift */; };
 		ADFF0CB6268DD902006246F1 /* TVShowRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CB5268DD902006246F1 /* TVShowRepositoryImpl.swift */; };
 		ADFF0CB9268DDAB2006246F1 /* TVShowMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CB8268DDAB2006246F1 /* TVShowMapper.swift */; };
+		ADFF0CBC268DDF22006246F1 /* GetTVShowsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CBB268DDF22006246F1 /* GetTVShowsUseCase.swift */; };
+		ADFF0CBF268DE112006246F1 /* GetTVShowsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CBE268DE112006246F1 /* GetTVShowsUseCaseTests.swift */; };
+		ADFF0CC1268DE1CD006246F1 /* TestSchedulerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CC0268DE1CD006246F1 /* TestSchedulerProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +140,9 @@
 		ADFF0CB2268DD841006246F1 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		ADFF0CB5268DD902006246F1 /* TVShowRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowRepositoryImpl.swift; sourceTree = "<group>"; };
 		ADFF0CB8268DDAB2006246F1 /* TVShowMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowMapper.swift; sourceTree = "<group>"; };
+		ADFF0CBB268DDF22006246F1 /* GetTVShowsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTVShowsUseCase.swift; sourceTree = "<group>"; };
+		ADFF0CBE268DE112006246F1 /* GetTVShowsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTVShowsUseCaseTests.swift; sourceTree = "<group>"; };
+		ADFF0CC0268DE1CD006246F1 /* TestSchedulerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSchedulerProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,7 +232,6 @@
 			isa = PBXGroup;
 			children = (
 				ADFF0C50268CAD82006246F1 /* App */,
-				ADFF0C5B268CB3D8006246F1 /* Wrapper */,
 				ADFF0C17268C9A34006246F1 /* Resources */,
 			);
 			path = Application;
@@ -271,6 +276,8 @@
 		ADFF0BB4268C835E006246F1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				ADFF0BB5268C836C006246F1 /* QueryUseCase.swift */,
+				ADFF0BBA268C8392006246F1 /* UseCase.swift */,
 				ADFF0BB8268C8380006246F1 /* DispacherHelper.swift */,
 				ADFF0C00268C8B86006246F1 /* DomainError.swift */,
 				ADFF0C6A268CDA15006246F1 /* DependecyInjection.swift */,
@@ -373,8 +380,7 @@
 		ADFF0C2C268CA0D6006246F1 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				ADFF0BBA268C8392006246F1 /* UseCase.swift */,
-				ADFF0BB5268C836C006246F1 /* QueryUseCase.swift */,
+				ADFF0CBB268DDF22006246F1 /* GetTVShowsUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -432,13 +438,6 @@
 				ADFF0BF8268C870E006246F1 /* SceneDelegate.swift */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		ADFF0C5B268CB3D8006246F1 /* Wrapper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Wrapper;
 			sourceTree = "<group>";
 		};
 		ADFF0C62268CC009006246F1 /* Providers */ = {
@@ -529,6 +528,7 @@
 		ADFF0C8C268DA8BB006246F1 /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				ADFF0CBD268DE0FC006246F1 /* Domain */,
 				ADFF0C91268DB2D3006246F1 /* Data */,
 			);
 			path = UnitTests;
@@ -538,6 +538,7 @@
 			isa = PBXGroup;
 			children = (
 				ADFF0C8F268DAC8D006246F1 /* ServiceClientStub.swift */,
+				ADFF0CC0268DE1CD006246F1 /* TestSchedulerProvider.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -621,6 +622,14 @@
 				ADFF0CB8268DDAB2006246F1 /* TVShowMapper.swift */,
 			);
 			path = Mapper;
+			sourceTree = "<group>";
+		};
+		ADFF0CBD268DE0FC006246F1 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF0CBE268DE112006246F1 /* GetTVShowsUseCaseTests.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -777,7 +786,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/Mock/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PROJECT_DIR}/../Cuckoo/run\" --download generate --testable \\\n\"${PROJECT_NAME}\" --output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Domain/UseCase/QueryUseCase.swift\" \\\n\"${INPUT_DIR}/Data/Networking/Service/MazeService.swift\"\n";
+			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/Mock/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PROJECT_DIR}/../Cuckoo/run\" --download generate --testable \\\n\"${PROJECT_NAME}\" --output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Domain/UseCase/QueryUseCase.swift\" \\\n\"${INPUT_DIR}/Domain/Repository/TVShowRepository.swift\" \\\n\"${INPUT_DIR}/Data/Networking/Service/MazeService.swift\"\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -823,6 +832,7 @@
 				ADFF0C31268CA1FE006246F1 /* ViewExt.swift in Sources */,
 				ADFF0C54268CADDC006246F1 /* SplashProvider.swift in Sources */,
 				ADFF0C11268C914C006246F1 /* NetworkService.swift in Sources */,
+				ADFF0CBC268DDF22006246F1 /* GetTVShowsUseCase.swift in Sources */,
 				ADFF0CA3268DCF72006246F1 /* TVShowRepository.swift in Sources */,
 				ADFF0C5A268CB383006246F1 /* HelperAssemblyModule.swift in Sources */,
 				ADFF0C84268D27CC006246F1 /* TVShowTO.swift in Sources */,
@@ -838,6 +848,8 @@
 				ADFF0B57268C5675006246F1 /* MazeServiceTests.swift in Sources */,
 				ADFF0CA0268DBC5D006246F1 /* XCTest+Combine.swift in Sources */,
 				ADFF0CB3268DD841006246F1 /* GeneratedMocks.swift in Sources */,
+				ADFF0CBF268DE112006246F1 /* GetTVShowsUseCaseTests.swift in Sources */,
+				ADFF0CC1268DE1CD006246F1 /* TestSchedulerProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

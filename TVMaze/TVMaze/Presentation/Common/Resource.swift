@@ -32,7 +32,7 @@ enum Resource<T> {
     public static func failFromError(_ error: Error) -> Resource<T> {
         if let generalDomainError = error as? GeneralDomainError {
             switch generalDomainError {
-            case .noFound:
+            case .noFound, .notParams:
                 return Resource<T>.fail("error_something_wrong".localized())
                 
             case .notConnection:

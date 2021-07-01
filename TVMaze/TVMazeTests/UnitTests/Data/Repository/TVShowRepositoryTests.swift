@@ -37,10 +37,9 @@ class TVShowRepositoryTests: XCTestCase {
         // then
         XCTAssertNotNil(result)
         XCTAssertEqual(result, tvShowListExpected)
-        verify(mockMazeService).getShows(page: page)
+        verify(mockMazeService).getShows(page: equal(to: page))
     }
 }
-
 
 extension TVShowRepositoryTests {
 
