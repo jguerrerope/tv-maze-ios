@@ -3,7 +3,7 @@ import UIKit
 
 extension SplashViewController {
     
-    func setUpUI() {
+    func setupUI() {
         view.backgroundColor = AppColor.midnightBlueDark
         setupSubviews()
         setupConstraints()
@@ -15,7 +15,7 @@ extension SplashViewController {
     }
     
     private func setupConstraints() {
-        iconImageView.anchorCenterSuperview()
+        iconImageView.anchorCenterToView(view)
         iconImageView.anchor(
             widthConstant: 180
         )

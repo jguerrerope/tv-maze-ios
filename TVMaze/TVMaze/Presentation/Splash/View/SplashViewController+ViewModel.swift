@@ -1,10 +1,10 @@
 import UIKit
 import Foundation
 
-// ViewModel SetUp
+
 extension SplashViewController {
     
-    func setUpViewModel() {
+    func setupViewModel() {
         viewModel.navigate.addAndNotify(self, { [weak self ] _ in
             self?.router.goToHome()
         })

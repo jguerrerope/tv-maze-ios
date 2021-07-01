@@ -11,7 +11,7 @@ import UIKit
 extension UIView {
     
     @discardableResult
-    public func fillView(with view: UIView,
+    public func fillView(_ view: UIView,
                          topConstant: CGFloat = 0,
                          leftConstant: CGFloat = 0,
                          bottomConstant: CGFloat = 0,
@@ -26,42 +26,6 @@ extension UIView {
                       bottomConstant: bottomConstant,
                       rightConstant: rightConstant,
                       active: active)
-    }
-    
-    @discardableResult
-    public func fillSuperview(topConstant: CGFloat = 0,
-                              leftConstant: CGFloat = 0,
-                              bottomConstant: CGFloat = 0,
-                              rightConstant: CGFloat = 0,
-                              active: Bool = true) -> [NSLayoutConstraint] {
-        
-        if let superview = superview {
-            return fillView(with: superview,
-                            topConstant: topConstant,
-                            leftConstant: leftConstant,
-                            bottomConstant: bottomConstant,
-                            rightConstant: rightConstant,
-                            active: active
-            )
-        }
-        return [NSLayoutConstraint]()
-    }
-    
-    @discardableResult
-    public func proportionWidthToSuperView(multiplier: CGFloat, active: Bool = true) -> [NSLayoutConstraint] {
-        if let superview = superview {
-            return proportionWidthToView(superview, multiplier: multiplier, active: active)
-        }
-        return [NSLayoutConstraint]()
-    }
-    
-    @discardableResult
-    public func proportionHeightToSuperView(multiplier: CGFloat, active: Bool = true)  -> [NSLayoutConstraint] {
-        translatesAutoresizingMaskIntoConstraints = false
-        if let superview = superview {
-            return proportionHeightToView(superview, multiplier: multiplier, active: active)
-        }
-        return [NSLayoutConstraint]()
     }
     
     @discardableResult
@@ -94,8 +58,8 @@ extension UIView {
                        width: NSLayoutDimension? = nil,
                        height: NSLayoutDimension? = nil,
                        widthConstant: CGFloat = 0,
-                       heightConstant: CGFloat = 0,
                        widthMultiplier: CGFloat = 1.0,
+                       heightConstant: CGFloat = 0,
                        heightMultiplier: CGFloat = 1.0,
                        centerX: NSLayoutXAxisAnchor? = nil,
                        centerY: NSLayoutYAxisAnchor? = nil,
@@ -219,17 +183,6 @@ extension UIView {
         anchors +=  anchorCenterXToView(view, constant: constantX, active: active)
         anchors +=  anchorCenterYToView(view, constant: constantY, active: active)
         
-        return anchors
-    }
-    
-    @discardableResult
-    public func anchorCenterSuperview(constantX: CGFloat = 0, constantY: CGFloat = 0, active: Bool = true) -> [NSLayoutConstraint] {
-        var anchors = [NSLayoutConstraint]()
-        
-        if let superview = superview {
-            anchors +=  anchorCenterXToView(superview, constant: constantX, active: active)
-            anchors +=  anchorCenterYToView(superview, constant: constantY, active: active)
-        }
         return anchors
     }
     

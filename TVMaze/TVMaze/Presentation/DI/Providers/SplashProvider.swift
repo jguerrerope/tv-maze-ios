@@ -1,13 +1,18 @@
 import Foundation
 import UIKit
 
-public class SplashProvider: Provider<UINavigationController> {
+public class SplashProvider: ComponentFactoryProvider<UINavigationController> {
     
-    public override func instance() -> UINavigationController {
+    init() {
+        super.init(type: .weak)
+    }
+    
+    public override func internalFactory() -> UINavigationController {
         let router = provideRouter()
         let viewModel = provideViewModel()
+        let viewController = SplashViewController(viewModel: viewModel, router: router)
         
-        return UINavigationController(rootViewController: SplashViewController(viewModel: viewModel, router: router))
+        return UINavigationController(rootViewController: viewController)
     }
     
     private func provideRouter() -> SplashRouter {

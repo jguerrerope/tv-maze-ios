@@ -2,8 +2,6 @@ import Foundation
 
 struct TVShowTO: Codable {
 
-    
-
     let id: Int
     let name: String
     let type: String

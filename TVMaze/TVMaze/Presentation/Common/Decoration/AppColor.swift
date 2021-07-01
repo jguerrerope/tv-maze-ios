@@ -3,7 +3,13 @@ import UIKit
 
 struct AppColor {
     
+    static let clear = UIColor.clear
+    static let white = UIColor.white
     static let midnightBlueDark = UIColor(hex: "#22282d")
+    static let lightMidnightBlue = UIColor(hex: "#344048")
+    
+    static let blackAlpha35 = UIColor.black.withAlphaComponent(0.35)
+    static let lightMidnightBlueAlpha35 = lightMidnightBlue.withAlphaComponent(0.35)
 }
 
 

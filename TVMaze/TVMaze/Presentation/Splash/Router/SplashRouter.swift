@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol SplashRouter {
+protocol SplashRouter {
     
     func goToHome()
 }

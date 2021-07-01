@@ -1,6 +1,6 @@
 import Foundation
 
-public class SplashViewModel {
+class SplashViewModel {
     
     private static let delayScreenInSeconds: Double = 3
     
@@ -8,7 +8,7 @@ public class SplashViewModel {
     
     let navigate = ReactiveValue<Bool>()
     
-    public init(dispacherHelper: DispacherHelper) {
+    init(dispacherHelper: DispacherHelper) {
         self.dispacherHelper = dispacherHelper
     }
    

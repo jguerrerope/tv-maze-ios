@@ -15,5 +15,18 @@ public class PresentationAssemblyModule {
     
     // Mark: Feature Providers
     public static let splashProvider: Provider<UINavigationController> = SplashProvider()
-    public static let homeProvider: Provider<UINavigationController> = HomeProvider()
+//    public static let homeProvider: Provider<UINavigationController> = HomeProvider()
+    
+    public static let homeProvider: Provider<UINavigationController> = FactoryProvider<UINavigationController>(type: .weak) {
+        let router =  HomeRouterImpl(
+            hostViewControllerProvider: PresentationAssemblyModule.homeProvider
+        )
+        
+        let viewModel = HomeViewModel(
+            getTVShowsUseCase: DomainAssemblyModule.getTVShowsUseCase.instance()
+        )
+        let viewController = HomeViewController(viewModel: viewModel, router: router)
+        
+        return UINavigationController(rootViewController: viewController)
+    }
 }

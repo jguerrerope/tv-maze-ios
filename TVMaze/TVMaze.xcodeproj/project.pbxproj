@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD2CD879268E5BB8002BB6F9 /* ShadowContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2CD878268E5BB8002BB6F9 /* ShadowContainerView.swift */; };
+		AD2CD87F268E61DE002BB6F9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD2CD87B268E61DE002BB6F9 /* Localizable.strings */; };
+		AD2CD880268E61DE002BB6F9 /* StaticLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD2CD87E268E61DE002BB6F9 /* StaticLocalizable.strings */; };
+		AD2CD884268E6353002BB6F9 /* TVShowItemViewPayloadMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2CD883268E6353002BB6F9 /* TVShowItemViewPayloadMapper.swift */; };
 		ADFF0B40268C5674006246F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0B3F268C5674006246F1 /* AppDelegate.swift */; };
 		ADFF0B46268C5675006246F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADFF0B45268C5675006246F1 /* Assets.xcassets */; };
 		ADFF0B4C268C5675006246F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADFF0B4A268C5675006246F1 /* LaunchScreen.storyboard */; };
@@ -62,6 +66,26 @@
 		ADFF0CBC268DDF22006246F1 /* GetTVShowsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CBB268DDF22006246F1 /* GetTVShowsUseCase.swift */; };
 		ADFF0CBF268DE112006246F1 /* GetTVShowsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CBE268DE112006246F1 /* GetTVShowsUseCaseTests.swift */; };
 		ADFF0CC1268DE1CD006246F1 /* TestSchedulerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CC0268DE1CD006246F1 /* TestSchedulerProvider.swift */; };
+		ADFF0CC4268E0B97006246F1 /* CardContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CC3268E0B97006246F1 /* CardContainerView.swift */; };
+		ADFF0CC9268E0BE5006246F1 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CC8268E0BE5006246F1 /* HomeViewModel.swift */; };
+		ADFF0CCC268E0D17006246F1 /* TVShowViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CCB268E0D17006246F1 /* TVShowViewCell.swift */; };
+		ADFF0CCE268E0D2A006246F1 /* TVShowViewCell+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CCD268E0D2A006246F1 /* TVShowViewCell+Layout.swift */; };
+		ADFF0CD1268E0E27006246F1 /* TVShowItemViewPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CD0268E0E27006246F1 /* TVShowItemViewPayload.swift */; };
+		ADFF0CD5268E0F45006246F1 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = ADFF0CD4268E0F45006246F1 /* AlamofireImage */; };
+		ADFF0CD8268E1305006246F1 /* BaseTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CD7268E1305006246F1 /* BaseTableAdapter.swift */; };
+		ADFF0CDA268E133A006246F1 /* HomeCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CD9268E133A006246F1 /* HomeCollectionViewAdapter.swift */; };
+		ADFF0CE2268E177B006246F1 /* UITableViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CE1268E177B006246F1 /* UITableViewExt.swift */; };
+		ADFF0CE5268E1B06006246F1 /* DeepDiff in Frameworks */ = {isa = PBXBuildFile; productRef = ADFF0CE4268E1B06006246F1 /* DeepDiff */; };
+		ADFF0CE7268E1BC9006246F1 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CE6268E1BC9006246F1 /* HomeRouter.swift */; };
+		ADFF0CE9268E1BD0006246F1 /* HomeRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CE8268E1BD0006246F1 /* HomeRouterImpl.swift */; };
+		ADFF0CEB268E1CA5006246F1 /* HomeViewController+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CEA268E1CA5006246F1 /* HomeViewController+Layout.swift */; };
+		ADFF0CED268E1DBD006246F1 /* HomeViewController+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CEC268E1DBD006246F1 /* HomeViewController+ViewModel.swift */; };
+		ADFF0CF0268E1F24006246F1 /* DomainAssemblyModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CEF268E1F24006246F1 /* DomainAssemblyModule.swift */; };
+		ADFF0CF3268E202E006246F1 /* RepositoryAssemblyModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CF2268E202E006246F1 /* RepositoryAssemblyModule.swift */; };
+		ADFF0CF5268E206F006246F1 /* ServiceAssemblyModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CF4268E206F006246F1 /* ServiceAssemblyModule.swift */; };
+		ADFF0CF6268E319E006246F1 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ADFF0C7D268D14BB006246F1 /* Montserrat-Bold.ttf */; };
+		ADFF0CF7268E31A0006246F1 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ADFF0C7B268D14BB006246F1 /* Montserrat-Regular.ttf */; };
+		ADFF0CF8268E31A2006246F1 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ADFF0C7C268D14BB006246F1 /* Montserrat-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +106,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD2CD878268E5BB8002BB6F9 /* ShadowContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowContainerView.swift; sourceTree = "<group>"; };
+		AD2CD87C268E61DE002BB6F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AD2CD87D268E61DE002BB6F9 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AD2CD87E268E61DE002BB6F9 /* StaticLocalizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = StaticLocalizable.strings; sourceTree = "<group>"; };
+		AD2CD883268E6353002BB6F9 /* TVShowItemViewPayloadMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowItemViewPayloadMapper.swift; sourceTree = "<group>"; };
 		ADFF0B3C268C5674006246F1 /* TVMaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVMaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADFF0B3F268C5674006246F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADFF0B45268C5675006246F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -143,6 +172,21 @@
 		ADFF0CBB268DDF22006246F1 /* GetTVShowsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTVShowsUseCase.swift; sourceTree = "<group>"; };
 		ADFF0CBE268DE112006246F1 /* GetTVShowsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTVShowsUseCaseTests.swift; sourceTree = "<group>"; };
 		ADFF0CC0268DE1CD006246F1 /* TestSchedulerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSchedulerProvider.swift; sourceTree = "<group>"; };
+		ADFF0CC3268E0B97006246F1 /* CardContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContainerView.swift; sourceTree = "<group>"; };
+		ADFF0CC8268E0BE5006246F1 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		ADFF0CCB268E0D17006246F1 /* TVShowViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowViewCell.swift; sourceTree = "<group>"; };
+		ADFF0CCD268E0D2A006246F1 /* TVShowViewCell+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TVShowViewCell+Layout.swift"; sourceTree = "<group>"; };
+		ADFF0CD0268E0E27006246F1 /* TVShowItemViewPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowItemViewPayload.swift; sourceTree = "<group>"; };
+		ADFF0CD7268E1305006246F1 /* BaseTableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableAdapter.swift; sourceTree = "<group>"; };
+		ADFF0CD9268E133A006246F1 /* HomeCollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewAdapter.swift; sourceTree = "<group>"; };
+		ADFF0CE1268E177B006246F1 /* UITableViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExt.swift; sourceTree = "<group>"; };
+		ADFF0CE6268E1BC9006246F1 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		ADFF0CE8268E1BD0006246F1 /* HomeRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterImpl.swift; sourceTree = "<group>"; };
+		ADFF0CEA268E1CA5006246F1 /* HomeViewController+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Layout.swift"; sourceTree = "<group>"; };
+		ADFF0CEC268E1DBD006246F1 /* HomeViewController+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+ViewModel.swift"; sourceTree = "<group>"; };
+		ADFF0CEF268E1F24006246F1 /* DomainAssemblyModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainAssemblyModule.swift; sourceTree = "<group>"; };
+		ADFF0CF2268E202E006246F1 /* RepositoryAssemblyModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryAssemblyModule.swift; sourceTree = "<group>"; };
+		ADFF0CF4268E206F006246F1 /* ServiceAssemblyModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssemblyModule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +194,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADFF0CD5268E0F45006246F1 /* AlamofireImage in Frameworks */,
+				ADFF0CE5268E1B06006246F1 /* DeepDiff in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +219,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD2CD87A268E61DE002BB6F9 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				AD2CD87B268E61DE002BB6F9 /* Localizable.strings */,
+				AD2CD87E268E61DE002BB6F9 /* StaticLocalizable.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		AD2CD881268E6322002BB6F9 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				AD2CD883268E6353002BB6F9 /* TVShowItemViewPayloadMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		AD2CD882268E633A002BB6F9 /* Payload */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF0CD0268E0E27006246F1 /* TVShowItemViewPayload.swift */,
+			);
+			path = Payload;
+			sourceTree = "<group>";
+		};
 		ADFF0B33268C5673006246F1 = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +314,7 @@
 				ADFF0C68268CC12D006246F1 /* DI */,
 				ADFF0C6E268D032D006246F1 /* Helper */,
 				ADFF0BFB268C8A9E006246F1 /* Common */,
+				ADFF0CC2268E0B88006246F1 /* Components */,
 				ADFF0C02268C8C3D006246F1 /* Extension */,
 				ADFF0C63268CC037006246F1 /* Home */,
 				ADFF0C26268CA011006246F1 /* Splash */,
@@ -254,6 +326,7 @@
 		ADFF0BAF268C8261006246F1 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				ADFF0CF1268E2020006246F1 /* DI */,
 				ADFF0CB7268DDAA4006246F1 /* Mapper */,
 				ADFF0C23268C9C9E006246F1 /* Extension */,
 				ADFF0CB4268DD8F9006246F1 /* Repository */,
@@ -265,6 +338,7 @@
 		ADFF0BB0268C8265006246F1 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				ADFF0CEE268E1F12006246F1 /* DI */,
 				ADFF0CA4268DCF9A006246F1 /* Model */,
 				ADFF0BB4268C835E006246F1 /* Common */,
 				ADFF0C2C268CA0D6006246F1 /* UseCase */,
@@ -292,6 +366,7 @@
 				ADFF0BFC268C8ABD006246F1 /* ReactiveValue.swift */,
 				ADFF0BFE268C8B3C006246F1 /* Resource.swift */,
 				ADFF0C7E268D1652006246F1 /* DeviceConstants.swift */,
+				ADFF0CD7268E1305006246F1 /* BaseTableAdapter.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -299,7 +374,6 @@
 		ADFF0C02268C8C3D006246F1 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				ADFF0C73268D1302006246F1 /* ViewController */,
 				ADFF0C2F268CA1ED006246F1 /* View */,
 				ADFF0C03268C8C55006246F1 /* Primitive */,
 				ADFF0C0A268C8D53006246F1 /* BundleExt.swift */,
@@ -346,6 +420,7 @@
 		ADFF0C18268C9A74006246F1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AD2CD87A268E61DE002BB6F9 /* Strings */,
 				ADFF0C76268D148E006246F1 /* Font */,
 				ADFF0B45268C5675006246F1 /* Assets.xcassets */,
 			);
@@ -388,8 +463,10 @@
 		ADFF0C2F268CA1ED006246F1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ADFF0C74268D1311006246F1 /* UINavigationController+NavigationBar.swift */,
 				ADFF0C30268CA1FE006246F1 /* ViewExt.swift */,
 				ADFF0C71268D0D38006246F1 /* UIView+Anchors.swift */,
+				ADFF0CE1268E177B006246F1 /* UITableViewExt.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -452,7 +529,9 @@
 		ADFF0C63268CC037006246F1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				ADFF0C64268CC045006246F1 /* HomeViewController.swift */,
+				ADFF0CC7268E0BC7006246F1 /* Router */,
+				ADFF0CC6268E0BC1006246F1 /* ViewModel */,
+				ADFF0CC5268E0BB4006246F1 /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -461,7 +540,6 @@
 			isa = PBXGroup;
 			children = (
 				ADFF0C62268CC009006246F1 /* Providers */,
-				ADFF0C59268CB383006246F1 /* HelperAssemblyModule.swift */,
 				ADFF0C60268CBF8F006246F1 /* PresentationAssemblyModule.swift */,
 			);
 			path = DI;
@@ -473,14 +551,6 @@
 				ADFF0C5C268CB46E006246F1 /* DispacherHelperImpl.swift */,
 			);
 			path = Helper;
-			sourceTree = "<group>";
-		};
-		ADFF0C73268D1302006246F1 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				ADFF0C74268D1311006246F1 /* UINavigationController+NavigationBar.swift */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		ADFF0C76268D148E006246F1 /* Font */ = {
@@ -632,6 +702,81 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		ADFF0CC2268E0B88006246F1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF0CC3268E0B97006246F1 /* CardContainerView.swift */,
+				AD2CD878268E5BB8002BB6F9 /* ShadowContainerView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		ADFF0CC5268E0BB4006246F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF0CCA268E0CF2006246F1 /* Components */,
+				ADFF0C64268CC045006246F1 /* HomeViewController.swift */,
+				ADFF0CEA268E1CA5006246F1 /* HomeViewController+Layout.swift */,
+				ADFF0CEC268E1DBD006246F1 /* HomeViewController+ViewModel.swift */,
+				ADFF0CD9268E133A006246F1 /* HomeCollectionViewAdapter.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ADFF0CC6268E0BC1006246F1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AD2CD882268E633A002BB6F9 /* Payload */,
+				AD2CD881268E6322002BB6F9 /* Mapper */,
+				ADFF0CC8268E0BE5006246F1 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ADFF0CC7268E0BC7006246F1 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF0CE6268E1BC9006246F1 /* HomeRouter.swift */,
+				ADFF0CE8268E1BD0006246F1 /* HomeRouterImpl.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		ADFF0CCA268E0CF2006246F1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF0CD2268E0E33006246F1 /* TVShowViewCell */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		ADFF0CD2268E0E33006246F1 /* TVShowViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF0CCB268E0D17006246F1 /* TVShowViewCell.swift */,
+				ADFF0CCD268E0D2A006246F1 /* TVShowViewCell+Layout.swift */,
+			);
+			path = TVShowViewCell;
+			sourceTree = "<group>";
+		};
+		ADFF0CEE268E1F12006246F1 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF0CEF268E1F24006246F1 /* DomainAssemblyModule.swift */,
+				ADFF0C59268CB383006246F1 /* HelperAssemblyModule.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		ADFF0CF1268E2020006246F1 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF0CF2268E202E006246F1 /* RepositoryAssemblyModule.swift */,
+				ADFF0CF4268E206F006246F1 /* ServiceAssemblyModule.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -650,6 +795,8 @@
 			);
 			name = TVMaze;
 			packageProductDependencies = (
+				ADFF0CD4268E0F45006246F1 /* AlamofireImage */,
+				ADFF0CE4268E1B06006246F1 /* DeepDiff */,
 			);
 			productName = TVMaze;
 			productReference = ADFF0B3C268C5674006246F1 /* TVMaze.app */;
@@ -725,11 +872,14 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = ADFF0B33268C5673006246F1;
 			packageReferences = (
 				ADFF0BB1268C8348006246F1 /* XCRemoteSwiftPackageReference "Cuckoo" */,
 				ADFF0C9A268DB808006246F1 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */,
+				ADFF0CD3268E0F45006246F1 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				ADFF0CE3268E1B06006246F1 /* XCRemoteSwiftPackageReference "DeepDiff" */,
 			);
 			productRefGroup = ADFF0B3D268C5674006246F1 /* Products */;
 			projectDirPath = "";
@@ -747,8 +897,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADFF0CF7268E31A0006246F1 /* Montserrat-Regular.ttf in Resources */,
+				AD2CD87F268E61DE002BB6F9 /* Localizable.strings in Resources */,
 				ADFF0B4C268C5675006246F1 /* LaunchScreen.storyboard in Resources */,
 				ADFF0B46268C5675006246F1 /* Assets.xcassets in Resources */,
+				ADFF0CF6268E319E006246F1 /* Montserrat-Bold.ttf in Resources */,
+				AD2CD880268E61DE002BB6F9 /* StaticLocalizable.strings in Resources */,
+				ADFF0CF8268E31A2006246F1 /* Montserrat-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,35 +953,52 @@
 				ADFF0CA6268DCFC8006246F1 /* TVShow.swift in Sources */,
 				ADFF0C5D268CB46E006246F1 /* DispacherHelperImpl.swift in Sources */,
 				ADFF0C7F268D1652006246F1 /* DeviceConstants.swift in Sources */,
+				ADFF0CC9268E0BE5006246F1 /* HomeViewModel.swift in Sources */,
 				ADFF0BBB268C8392006246F1 /* UseCase.swift in Sources */,
 				ADFF0CB6268DD902006246F1 /* TVShowRepositoryImpl.swift in Sources */,
 				ADFF0C33268CA329006246F1 /* SplashViewModel.swift in Sources */,
 				ADFF0BFF268C8B3C006246F1 /* Resource.swift in Sources */,
 				ADFF0B40268C5674006246F1 /* AppDelegate.swift in Sources */,
+				ADFF0CD8268E1305006246F1 /* BaseTableAdapter.swift in Sources */,
 				ADFF0C05268C8C67006246F1 /* StringExt.swift in Sources */,
+				ADFF0CF5268E206F006246F1 /* ServiceAssemblyModule.swift in Sources */,
 				ADFF0C13268C989D006246F1 /* NetworkAPI.swift in Sources */,
+				ADFF0CE2268E177B006246F1 /* UITableViewExt.swift in Sources */,
 				ADFF0C89268D2974006246F1 /* MazeAPI.swift in Sources */,
 				ADFF0C0B268C8D53006246F1 /* BundleExt.swift in Sources */,
+				ADFF0CC4268E0B97006246F1 /* CardContainerView.swift in Sources */,
 				ADFF0C3C268CA757006246F1 /* SplashViewController+Layout.swift in Sources */,
+				AD2CD884268E6353002BB6F9 /* TVShowItemViewPayloadMapper.swift in Sources */,
+				ADFF0CF0268E1F24006246F1 /* DomainAssemblyModule.swift in Sources */,
 				ADFF0CB9268DDAB2006246F1 /* TVShowMapper.swift in Sources */,
 				ADFF0C25268C9CAB006246F1 /* EncodableExt.swift in Sources */,
 				ADFF0C67268CC09B006246F1 /* HomeProvider.swift in Sources */,
 				ADFF0BB6268C836C006246F1 /* QueryUseCase.swift in Sources */,
 				ADFF0C2B268CA06F006246F1 /* SplashRouter.swift in Sources */,
 				ADFF0C28268CA02B006246F1 /* SplashViewController.swift in Sources */,
+				ADFF0CD1268E0E27006246F1 /* TVShowItemViewPayload.swift in Sources */,
+				ADFF0CEB268E1CA5006246F1 /* HomeViewController+Layout.swift in Sources */,
 				ADFF0BB9268C8380006246F1 /* DispacherHelper.swift in Sources */,
+				ADFF0CED268E1DBD006246F1 /* HomeViewController+ViewModel.swift in Sources */,
+				ADFF0CE7268E1BC9006246F1 /* HomeRouter.swift in Sources */,
 				ADFF0C3A268CA6C9006246F1 /* SplashViewController+ViewModel.swift in Sources */,
 				ADFF0BFD268C8ABD006246F1 /* ReactiveValue.swift in Sources */,
+				AD2CD879268E5BB8002BB6F9 /* ShadowContainerView.swift in Sources */,
 				ADFF0C44268CAA4C006246F1 /* SpacingRule.swift in Sources */,
 				ADFF0C38268CA388006246F1 /* SplashRouterImpl.swift in Sources */,
 				ADFF0C01268C8B86006246F1 /* DomainError.swift in Sources */,
+				ADFF0CE9268E1BD0006246F1 /* HomeRouterImpl.swift in Sources */,
 				ADFF0C70268D0A4D006246F1 /* AppColor.swift in Sources */,
 				ADFF0BF9268C870E006246F1 /* SceneDelegate.swift in Sources */,
 				ADFF0C48268CAA66006246F1 /* AppFont.swift in Sources */,
 				ADFF0C75268D1311006246F1 /* UINavigationController+NavigationBar.swift in Sources */,
+				ADFF0CCC268E0D17006246F1 /* TVShowViewCell.swift in Sources */,
+				ADFF0CCE268E0D2A006246F1 /* TVShowViewCell+Layout.swift in Sources */,
 				ADFF0C8B268D2A64006246F1 /* MazeService.swift in Sources */,
 				ADFF0C72268D0D38006246F1 /* UIView+Anchors.swift in Sources */,
+				ADFF0CF3268E202E006246F1 /* RepositoryAssemblyModule.swift in Sources */,
 				ADFF0C61268CBF8F006246F1 /* PresentationAssemblyModule.swift in Sources */,
+				ADFF0CDA268E133A006246F1 /* HomeCollectionViewAdapter.swift in Sources */,
 				ADFF0C6B268CDA15006246F1 /* DependecyInjection.swift in Sources */,
 				ADFF0C65268CC045006246F1 /* HomeViewController.swift in Sources */,
 				ADFF0C31268CA1FE006246F1 /* ViewExt.swift in Sources */,
@@ -877,6 +1049,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		AD2CD87B268E61DE002BB6F9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD2CD87C268E61DE002BB6F9 /* en */,
+				AD2CD87D268E61DE002BB6F9 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		ADFF0B4A268C5675006246F1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1009,6 +1190,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = HCMACALMZY;
@@ -1021,8 +1203,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jguerrerope.TVMaze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1031,6 +1214,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = HCMACALMZY;
@@ -1043,8 +1227,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jguerrerope.TVMaze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1190,6 +1375,22 @@
 				minimumVersion = 9.1.0;
 			};
 		};
+		ADFF0CD3268E0F45006246F1 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.0;
+			};
+		};
+		ADFF0CE3268E1B06006246F1 /* XCRemoteSwiftPackageReference "DeepDiff" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onmyway133/DeepDiff.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1207,6 +1408,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = ADFF0BB1268C8348006246F1 /* XCRemoteSwiftPackageReference "Cuckoo" */;
 			productName = Cuckoo;
+		};
+		ADFF0CD4268E0F45006246F1 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ADFF0CD3268E0F45006246F1 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+		ADFF0CE4268E1B06006246F1 /* DeepDiff */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ADFF0CE3268E1B06006246F1 /* XCRemoteSwiftPackageReference "DeepDiff" */;
+			productName = DeepDiff;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

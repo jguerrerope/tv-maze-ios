@@ -3,8 +3,8 @@ import UIKit
 
 struct AppFont {
     static let montserratSemiBoldSmall = FontSetup.monserrat(.semiBold, .small).font
-    
-    
+    static let montserratBoldExtraLarge = FontSetup.monserrat(.bold, .extraLarge).font
+   
 }
 
 private enum FontSetup {
@@ -47,7 +47,9 @@ private class FontBundle {
     }
     
     static func registerFont(_ fontName: String, extension: String, in bundle: Bundle) {
-        guard let fontURL = bundle.url(forResource: fontName, withExtension: `extension`) else { return }
+        guard let fontURL = bundle.url(forResource: fontName, withExtension: `extension`) else {
+            return
+        }
         CTFontManagerRegisterFontsForURL(fontURL as CFURL, CTFontManagerScope.process, nil)
     }
 }

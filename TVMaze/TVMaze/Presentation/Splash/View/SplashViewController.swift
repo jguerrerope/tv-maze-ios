@@ -1,13 +1,13 @@
 import UIKit
 import Foundation
 
-public class SplashViewController: UIViewController {
+class SplashViewController: UIViewController {
  
     let router: SplashRouter
     let viewModel: SplashViewModel
     let iconImageView = UIImageView()
 
-    public init(viewModel: SplashViewModel, router: SplashRouter) {
+    init(viewModel: SplashViewModel, router: SplashRouter) {
         self.viewModel = viewModel
         self.router = router
         super.init(nibName: nil, bundle: nil)
@@ -17,14 +17,18 @@ public class SplashViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        print(#function, String(describing: SplashViewController.self))
+    }
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = true
-        setUpUI()
+        setupUI()
+        setupViewModel()
     }
     
     public override func viewWillAppear(_ animated: Bool) {
-        setUpViewModel()
-        self.navigationController?.isNavigationBarHidden = true
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarStyle()
     }
 }

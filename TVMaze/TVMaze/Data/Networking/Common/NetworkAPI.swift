@@ -1,7 +1,8 @@
 import Foundation
 import Combine
 
-class NetworkService<API: NetworkAPI> {
+
+class NetworkService<API: NetworkAPI>: NSObject, URLSessionTaskDelegate {
     
     private enum RequestType: String {
         case GET = "GET"
@@ -35,6 +36,10 @@ class NetworkService<API: NetworkAPI> {
         }
         
         return execute(urlRequest)
+    }
+    
+    func urlSession(_ session: URLSession, task: URLSessionTask, willPerformHTTPRedirection response: HTTPURLResponse, newRequest request: URLRequest, completionHandler: @escaping (URLRequest?) -> Void) {
+        completionHandler(request)
     }
 }
 
