@@ -10,7 +10,7 @@
 		ADFF0B40268C5674006246F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0B3F268C5674006246F1 /* AppDelegate.swift */; };
 		ADFF0B46268C5675006246F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADFF0B45268C5675006246F1 /* Assets.xcassets */; };
 		ADFF0B4C268C5675006246F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADFF0B4A268C5675006246F1 /* LaunchScreen.storyboard */; };
-		ADFF0B57268C5675006246F1 /* TVMazeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0B56268C5675006246F1 /* TVMazeTests.swift */; };
+		ADFF0B57268C5675006246F1 /* MazeServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0B56268C5675006246F1 /* MazeServiceTests.swift */; };
 		ADFF0B62268C5675006246F1 /* TVMazeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0B61268C5675006246F1 /* TVMazeUITests.swift */; };
 		ADFF0BB6268C836C006246F1 /* QueryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0BB5268C836C006246F1 /* QueryUseCase.swift */; };
 		ADFF0BB9268C8380006246F1 /* DispacherHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0BB8268C8380006246F1 /* DispacherHelper.swift */; };
@@ -23,7 +23,6 @@
 		ADFF0C0B268C8D53006246F1 /* BundleExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0C0A268C8D53006246F1 /* BundleExt.swift */; };
 		ADFF0C11268C914C006246F1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0C10268C914C006246F1 /* NetworkService.swift */; };
 		ADFF0C13268C989D006246F1 /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0C12268C989D006246F1 /* NetworkAPI.swift */; };
-		ADFF0C22268C9C75006246F1 /* OHHTTPStubsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ADFF0C21268C9C75006246F1 /* OHHTTPStubsSwift */; };
 		ADFF0C25268C9CAB006246F1 /* EncodableExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0C24268C9CAB006246F1 /* EncodableExt.swift */; };
 		ADFF0C28268CA02B006246F1 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0C27268CA02B006246F1 /* SplashViewController.swift */; };
 		ADFF0C2B268CA06F006246F1 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0C2A268CA06F006246F1 /* SplashRouter.swift */; };
@@ -45,9 +44,21 @@
 		ADFF0C72268D0D38006246F1 /* UIView+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0C71268D0D38006246F1 /* UIView+Anchors.swift */; };
 		ADFF0C75268D1311006246F1 /* UINavigationController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0C74268D1311006246F1 /* UINavigationController+NavigationBar.swift */; };
 		ADFF0C7F268D1652006246F1 /* DeviceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0C7E268D1652006246F1 /* DeviceConstants.swift */; };
-		ADFF0C84268D27CC006246F1 /* ShowTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0C83268D27CC006246F1 /* ShowTO.swift */; };
+		ADFF0C84268D27CC006246F1 /* TVShowTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0C83268D27CC006246F1 /* TVShowTO.swift */; };
 		ADFF0C89268D2974006246F1 /* MazeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0C88268D2974006246F1 /* MazeAPI.swift */; };
 		ADFF0C8B268D2A64006246F1 /* MazeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0C8A268D2A64006246F1 /* MazeService.swift */; };
+		ADFF0C95268DB548006246F1 /* ServiceClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0C8F268DAC8D006246F1 /* ServiceClientStub.swift */; };
+		ADFF0C97268DB5C3006246F1 /* tv_shows.json in Resources */ = {isa = PBXBuildFile; fileRef = ADFF0C96268DB5C3006246F1 /* tv_shows.json */; };
+		ADFF0C9C268DB808006246F1 /* OHHTTPStubsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ADFF0C9B268DB808006246F1 /* OHHTTPStubsSwift */; };
+		ADFF0C9E268DB980006246F1 /* OHHTTPStubs in Frameworks */ = {isa = PBXBuildFile; productRef = ADFF0C9D268DB980006246F1 /* OHHTTPStubs */; };
+		ADFF0CA0268DBC5D006246F1 /* XCTest+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0C9F268DBC5D006246F1 /* XCTest+Combine.swift */; };
+		ADFF0CA3268DCF72006246F1 /* TVShowRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CA2268DCF72006246F1 /* TVShowRepository.swift */; };
+		ADFF0CA6268DCFC8006246F1 /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CA5268DCFC8006246F1 /* TVShow.swift */; };
+		ADFF0CA8268DD427006246F1 /* TVShowRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CA7268DD427006246F1 /* TVShowRepositoryTests.swift */; };
+		ADFF0CB0268DD7A6006246F1 /* Cuckoo in Frameworks */ = {isa = PBXBuildFile; productRef = ADFF0CAF268DD7A6006246F1 /* Cuckoo */; };
+		ADFF0CB3268DD841006246F1 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CB2268DD841006246F1 /* GeneratedMocks.swift */; };
+		ADFF0CB6268DD902006246F1 /* TVShowRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CB5268DD902006246F1 /* TVShowRepositoryImpl.swift */; };
+		ADFF0CB9268DDAB2006246F1 /* TVShowMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CB8268DDAB2006246F1 /* TVShowMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +85,7 @@
 		ADFF0B4B268C5675006246F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADFF0B4D268C5675006246F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADFF0B52268C5675006246F1 /* TVMazeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVMazeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ADFF0B56268C5675006246F1 /* TVMazeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMazeTests.swift; sourceTree = "<group>"; };
+		ADFF0B56268C5675006246F1 /* MazeServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeServiceTests.swift; sourceTree = "<group>"; };
 		ADFF0B58268C5675006246F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADFF0B5D268C5675006246F1 /* TVMazeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVMazeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADFF0B61268C5675006246F1 /* TVMazeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMazeUITests.swift; sourceTree = "<group>"; };
@@ -114,9 +125,18 @@
 		ADFF0C7C268D14BB006246F1 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		ADFF0C7D268D14BB006246F1 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		ADFF0C7E268D1652006246F1 /* DeviceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceConstants.swift; sourceTree = "<group>"; };
-		ADFF0C83268D27CC006246F1 /* ShowTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTO.swift; sourceTree = "<group>"; };
+		ADFF0C83268D27CC006246F1 /* TVShowTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowTO.swift; sourceTree = "<group>"; };
 		ADFF0C88268D2974006246F1 /* MazeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeAPI.swift; sourceTree = "<group>"; };
 		ADFF0C8A268D2A64006246F1 /* MazeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeService.swift; sourceTree = "<group>"; };
+		ADFF0C8F268DAC8D006246F1 /* ServiceClientStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClientStub.swift; sourceTree = "<group>"; };
+		ADFF0C96268DB5C3006246F1 /* tv_shows.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = tv_shows.json; sourceTree = "<group>"; };
+		ADFF0C9F268DBC5D006246F1 /* XCTest+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTest+Combine.swift"; sourceTree = "<group>"; };
+		ADFF0CA2268DCF72006246F1 /* TVShowRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowRepository.swift; sourceTree = "<group>"; };
+		ADFF0CA5268DCFC8006246F1 /* TVShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
+		ADFF0CA7268DD427006246F1 /* TVShowRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowRepositoryTests.swift; sourceTree = "<group>"; };
+		ADFF0CB2268DD841006246F1 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
+		ADFF0CB5268DD902006246F1 /* TVShowRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowRepositoryImpl.swift; sourceTree = "<group>"; };
+		ADFF0CB8268DDAB2006246F1 /* TVShowMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +151,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADFF0C22268C9C75006246F1 /* OHHTTPStubsSwift in Frameworks */,
+				ADFF0C9C268DB808006246F1 /* OHHTTPStubsSwift in Frameworks */,
+				ADFF0C9E268DB980006246F1 /* OHHTTPStubs in Frameworks */,
+				ADFF0CB0268DD7A6006246F1 /* Cuckoo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +203,11 @@
 		ADFF0B55268C5675006246F1 /* TVMazeTests */ = {
 			isa = PBXGroup;
 			children = (
-				ADFF0B56268C5675006246F1 /* TVMazeTests.swift */,
+				ADFF0CAC268DD61D006246F1 /* Mock */,
+				ADFF0C92268DB353006246F1 /* Files */,
+				ADFF0C8D268DA8DA006246F1 /* Common */,
+				ADFF0C8E268DAC75006246F1 /* Extension */,
+				ADFF0C8C268DA8BB006246F1 /* UnitTests */,
 				ADFF0B58268C5675006246F1 /* Info.plist */,
 			);
 			path = TVMazeTests;
@@ -190,8 +216,6 @@
 		ADFF0B60268C5675006246F1 /* TVMazeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				ADFF0C8D268DA8DA006246F1 /* Common */,
-				ADFF0C8C268DA8BB006246F1 /* UnitTests */,
 				ADFF0B61268C5675006246F1 /* TVMazeUITests.swift */,
 				ADFF0B63268C5675006246F1 /* Info.plist */,
 			);
@@ -225,7 +249,9 @@
 		ADFF0BAF268C8261006246F1 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				ADFF0CB7268DDAA4006246F1 /* Mapper */,
 				ADFF0C23268C9C9E006246F1 /* Extension */,
+				ADFF0CB4268DD8F9006246F1 /* Repository */,
 				ADFF0C0C268C90BB006246F1 /* Networking */,
 			);
 			path = Data;
@@ -234,8 +260,10 @@
 		ADFF0BB0268C8265006246F1 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				ADFF0CA4268DCF9A006246F1 /* Model */,
 				ADFF0BB4268C835E006246F1 /* Common */,
 				ADFF0C2C268CA0D6006246F1 /* UseCase */,
+				ADFF0CA1268DCF53006246F1 /* Repository */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -477,7 +505,7 @@
 		ADFF0C82268D27B4006246F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				ADFF0C83268D27CC006246F1 /* ShowTO.swift */,
+				ADFF0C83268D27CC006246F1 /* TVShowTO.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -501,6 +529,7 @@
 		ADFF0C8C268DA8BB006246F1 /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				ADFF0C91268DB2D3006246F1 /* Data */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -508,8 +537,90 @@
 		ADFF0C8D268DA8DA006246F1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				ADFF0C8F268DAC8D006246F1 /* ServiceClientStub.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		ADFF0C8E268DAC75006246F1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF0C9F268DBC5D006246F1 /* XCTest+Combine.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		ADFF0C91268DB2D3006246F1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF0CAA268DD434006246F1 /* Repository */,
+				ADFF0CA9268DD42D006246F1 /* Service */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		ADFF0C92268DB353006246F1 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF0C96268DB5C3006246F1 /* tv_shows.json */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		ADFF0CA1268DCF53006246F1 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF0CA2268DCF72006246F1 /* TVShowRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		ADFF0CA4268DCF9A006246F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF0CA5268DCFC8006246F1 /* TVShow.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ADFF0CA9268DD42D006246F1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF0B56268C5675006246F1 /* MazeServiceTests.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		ADFF0CAA268DD434006246F1 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF0CA7268DD427006246F1 /* TVShowRepositoryTests.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		ADFF0CAC268DD61D006246F1 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF0CB2268DD841006246F1 /* GeneratedMocks.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		ADFF0CB4268DD8F9006246F1 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF0CB5268DD902006246F1 /* TVShowRepositoryImpl.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		ADFF0CB7268DDAA4006246F1 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF0CB8268DDAB2006246F1 /* TVShowMapper.swift */,
+			);
+			path = Mapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -519,6 +630,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADFF0B66268C5675006246F1 /* Build configuration list for PBXNativeTarget "TVMaze" */;
 			buildPhases = (
+				ADFF0CB1268DD81E006246F1 /* Cuckoo Generator */,
 				ADFF0B38268C5674006246F1 /* Sources */,
 				ADFF0B39268C5674006246F1 /* Frameworks */,
 				ADFF0B3A268C5674006246F1 /* Resources */,
@@ -549,7 +661,9 @@
 			);
 			name = TVMazeTests;
 			packageProductDependencies = (
-				ADFF0C21268C9C75006246F1 /* OHHTTPStubsSwift */,
+				ADFF0C9B268DB808006246F1 /* OHHTTPStubsSwift */,
+				ADFF0C9D268DB980006246F1 /* OHHTTPStubs */,
+				ADFF0CAF268DD7A6006246F1 /* Cuckoo */,
 			);
 			productName = TVMazeTests;
 			productReference = ADFF0B52268C5675006246F1 /* TVMazeTests.xctest */;
@@ -606,7 +720,7 @@
 			mainGroup = ADFF0B33268C5673006246F1;
 			packageReferences = (
 				ADFF0BB1268C8348006246F1 /* XCRemoteSwiftPackageReference "Cuckoo" */,
-				ADFF0C19268C9BDE006246F1 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */,
+				ADFF0C9A268DB808006246F1 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */,
 			);
 			productRefGroup = ADFF0B3D268C5674006246F1 /* Products */;
 			projectDirPath = "";
@@ -633,6 +747,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADFF0C97268DB5C3006246F1 /* tv_shows.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,14 +760,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		ADFF0CB1268DD81E006246F1 /* Cuckoo Generator */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Cuckoo Generator";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/Mock/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PROJECT_DIR}/../Cuckoo/run\" --download generate --testable \\\n\"${PROJECT_NAME}\" --output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Domain/UseCase/QueryUseCase.swift\" \\\n\"${INPUT_DIR}/Data/Networking/Service/MazeService.swift\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ADFF0B38268C5674006246F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADFF0CA6268DCFC8006246F1 /* TVShow.swift in Sources */,
 				ADFF0C5D268CB46E006246F1 /* DispacherHelperImpl.swift in Sources */,
 				ADFF0C7F268D1652006246F1 /* DeviceConstants.swift in Sources */,
 				ADFF0BBB268C8392006246F1 /* UseCase.swift in Sources */,
+				ADFF0CB6268DD902006246F1 /* TVShowRepositoryImpl.swift in Sources */,
 				ADFF0C33268CA329006246F1 /* SplashViewModel.swift in Sources */,
 				ADFF0BFF268C8B3C006246F1 /* Resource.swift in Sources */,
 				ADFF0B40268C5674006246F1 /* AppDelegate.swift in Sources */,
@@ -661,6 +799,7 @@
 				ADFF0C89268D2974006246F1 /* MazeAPI.swift in Sources */,
 				ADFF0C0B268C8D53006246F1 /* BundleExt.swift in Sources */,
 				ADFF0C3C268CA757006246F1 /* SplashViewController+Layout.swift in Sources */,
+				ADFF0CB9268DDAB2006246F1 /* TVShowMapper.swift in Sources */,
 				ADFF0C25268C9CAB006246F1 /* EncodableExt.swift in Sources */,
 				ADFF0C67268CC09B006246F1 /* HomeProvider.swift in Sources */,
 				ADFF0BB6268C836C006246F1 /* QueryUseCase.swift in Sources */,
@@ -684,8 +823,9 @@
 				ADFF0C31268CA1FE006246F1 /* ViewExt.swift in Sources */,
 				ADFF0C54268CADDC006246F1 /* SplashProvider.swift in Sources */,
 				ADFF0C11268C914C006246F1 /* NetworkService.swift in Sources */,
+				ADFF0CA3268DCF72006246F1 /* TVShowRepository.swift in Sources */,
 				ADFF0C5A268CB383006246F1 /* HelperAssemblyModule.swift in Sources */,
-				ADFF0C84268D27CC006246F1 /* ShowTO.swift in Sources */,
+				ADFF0C84268D27CC006246F1 /* TVShowTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,7 +833,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADFF0B57268C5675006246F1 /* TVMazeTests.swift in Sources */,
+				ADFF0CA8268DD427006246F1 /* TVShowRepositoryTests.swift in Sources */,
+				ADFF0C95268DB548006246F1 /* ServiceClientStub.swift in Sources */,
+				ADFF0B57268C5675006246F1 /* MazeServiceTests.swift in Sources */,
+				ADFF0CA0268DBC5D006246F1 /* XCTest+Combine.swift in Sources */,
+				ADFF0CB3268DD841006246F1 /* GeneratedMocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1026,7 +1170,7 @@
 				minimumVersion = 1.5.1;
 			};
 		};
-		ADFF0C19268C9BDE006246F1 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */ = {
+		ADFF0C9A268DB808006246F1 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AliSoftware/OHHTTPStubs.git";
 			requirement = {
@@ -1037,10 +1181,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		ADFF0C21268C9C75006246F1 /* OHHTTPStubsSwift */ = {
+		ADFF0C9B268DB808006246F1 /* OHHTTPStubsSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = ADFF0C19268C9BDE006246F1 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			package = ADFF0C9A268DB808006246F1 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
 			productName = OHHTTPStubsSwift;
+		};
+		ADFF0C9D268DB980006246F1 /* OHHTTPStubs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ADFF0C9A268DB808006246F1 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubs;
+		};
+		ADFF0CAF268DD7A6006246F1 /* Cuckoo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ADFF0BB1268C8348006246F1 /* XCRemoteSwiftPackageReference "Cuckoo" */;
+			productName = Cuckoo;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
