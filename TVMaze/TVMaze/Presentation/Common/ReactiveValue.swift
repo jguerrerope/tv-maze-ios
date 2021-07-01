@@ -2,7 +2,7 @@ import Foundation
 
 typealias CompletionHandler<T> = ((T) -> Void)
 
-class DynamicValue<T> {
+class ReactiveValue<T> {
     
     var value: T? {
         didSet {
@@ -14,6 +14,12 @@ class DynamicValue<T> {
     
     init(_ value: T? = nil) {
         self.value = value
+    }
+    
+    public func postValue(_ newValue: T?) {
+        DispatchQueue.main.async { [weak self] in
+            self?.value = newValue
+        }
     }
     
     public func addAndNotify(_ observer: NSObject, _ completionHandler: @escaping CompletionHandler<T>) {
