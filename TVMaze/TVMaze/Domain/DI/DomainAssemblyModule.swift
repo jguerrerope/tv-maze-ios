@@ -12,5 +12,4 @@ public class DomainAssemblyModule {
             dispacherHelper: HelperAssemblyModule.dispacherHelperProvider.instance()
         )
     }
-    
 }

@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: TVMaze/Data/Networking/Service/MazeService.swift at 2021-07-01 21:50:31 +0000
+// MARK: - Mocks generated from file: TVMaze/Data/Networking/Service/MazeService.swift at 2021-07-02 12:45:22 +0000
 
 
 import Cuckoo
@@ -159,7 +159,7 @@ import Foundation
 }
 
 
-// MARK: - Mocks generated from file: TVMaze/Domain/Repository/TVShowRepository.swift at 2021-07-01 21:50:31 +0000
+// MARK: - Mocks generated from file: TVMaze/Domain/Repository/TVShowRepository.swift at 2021-07-02 12:45:23 +0000
 
 
 import Cuckoo

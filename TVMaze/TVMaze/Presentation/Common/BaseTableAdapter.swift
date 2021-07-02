@@ -2,12 +2,12 @@ import Foundation
 import UIKit
 import DeepDiff
 
-open class BaseTableAdapter<T: DiffAware>: NSObject, UITableViewDataSource, UITableViewDelegate {
+class BaseTableAdapter<T: DiffAware>: NSObject, UITableViewDataSource, UITableViewDelegate {
     
     var dataSource: [T]
     let tableView: UITableView
     
-    public required init(tableView: UITableView) {
+    public init(tableView: UITableView) {
         self.tableView = tableView
         self.dataSource = []
         super.init()
@@ -52,9 +52,12 @@ open class BaseTableAdapter<T: DiffAware>: NSObject, UITableViewDataSource, UITa
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count
     }
-    
+
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
+    }
+    
+    public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

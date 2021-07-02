@@ -4,7 +4,6 @@ import UIKit
 class SplashRouterImpl {
     private var uiWindowProvider: Provider<UIWindow>
     private let homeViewControllerProvider: Provider<UINavigationController>
-    private static let animation: UIView.AnimationOptions = .transitionCrossDissolve
     
     init(uiWindowProvider: Provider<UIWindow>,
          homeViewControllerProvider: Provider<UINavigationController>) {

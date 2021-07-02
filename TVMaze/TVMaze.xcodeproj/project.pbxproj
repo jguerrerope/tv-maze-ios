@@ -11,6 +11,20 @@
 		AD2CD87F268E61DE002BB6F9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD2CD87B268E61DE002BB6F9 /* Localizable.strings */; };
 		AD2CD880268E61DE002BB6F9 /* StaticLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD2CD87E268E61DE002BB6F9 /* StaticLocalizable.strings */; };
 		AD2CD884268E6353002BB6F9 /* TVShowItemViewPayloadMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2CD883268E6353002BB6F9 /* TVShowItemViewPayloadMapper.swift */; };
+		AD2CD886268E7621002BB6F9 /* BaseViewPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2CD885268E7621002BB6F9 /* BaseViewPayload.swift */; };
+		AD2CD888268E783A002BB6F9 /* HomeSectionViewPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2CD887268E783A002BB6F9 /* HomeSectionViewPayload.swift */; };
+		AD2CD88B268E79A7002BB6F9 /* NextPageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2CD88A268E79A7002BB6F9 /* NextPageViewCell.swift */; };
+		AD2CD88D268E79AF002BB6F9 /* NextPageViewCell+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2CD88C268E79AF002BB6F9 /* NextPageViewCell+Layout.swift */; };
+		AD2CD88F268E8C7F002BB6F9 /* SkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2CD88E268E8C7F002BB6F9 /* SkeletonView.swift */; };
+		AD2CD895268E9956002BB6F9 /* TVShowDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2CD894268E9956002BB6F9 /* TVShowDetailsViewController.swift */; };
+		AD2CD898268E9981002BB6F9 /* TVShowDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2CD897268E9981002BB6F9 /* TVShowDetailsViewModel.swift */; };
+		AD2CD89B268E99F1002BB6F9 /* TVShowDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2CD89A268E99F1002BB6F9 /* TVShowDetailsRouter.swift */; };
+		AD2CD89D268E9A05002BB6F9 /* TVShowDetailsRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2CD89C268E9A05002BB6F9 /* TVShowDetailsRouterImpl.swift */; };
+		AD2CD89F268E9A4F002BB6F9 /* TVShowDetailsViewController+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2CD89E268E9A4F002BB6F9 /* TVShowDetailsViewController+Layout.swift */; };
+		AD2CD8A1268E9A9C002BB6F9 /* TVShowDetailsViewController+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2CD8A0268E9A9C002BB6F9 /* TVShowDetailsViewController+ViewModel.swift */; };
+		AD2CD8A3268E9AEB002BB6F9 /* TVShowDetailsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2CD8A2268E9AEB002BB6F9 /* TVShowDetailsProvider.swift */; };
+		AD2CD8A5268F0744002BB6F9 /* ShadowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2CD8A4268F0744002BB6F9 /* ShadowImageView.swift */; };
+		ADAA4394268F2B22003B651A /* TitleSubtitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA4393268F2B22003B651A /* TitleSubtitleView.swift */; };
 		ADFF0B40268C5674006246F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0B3F268C5674006246F1 /* AppDelegate.swift */; };
 		ADFF0B46268C5675006246F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADFF0B45268C5675006246F1 /* Assets.xcassets */; };
 		ADFF0B4C268C5675006246F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADFF0B4A268C5675006246F1 /* LaunchScreen.storyboard */; };
@@ -66,11 +80,10 @@
 		ADFF0CBC268DDF22006246F1 /* GetTVShowsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CBB268DDF22006246F1 /* GetTVShowsUseCase.swift */; };
 		ADFF0CBF268DE112006246F1 /* GetTVShowsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CBE268DE112006246F1 /* GetTVShowsUseCaseTests.swift */; };
 		ADFF0CC1268DE1CD006246F1 /* TestSchedulerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CC0268DE1CD006246F1 /* TestSchedulerProvider.swift */; };
-		ADFF0CC4268E0B97006246F1 /* CardContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CC3268E0B97006246F1 /* CardContainerView.swift */; };
 		ADFF0CC9268E0BE5006246F1 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CC8268E0BE5006246F1 /* HomeViewModel.swift */; };
 		ADFF0CCC268E0D17006246F1 /* TVShowViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CCB268E0D17006246F1 /* TVShowViewCell.swift */; };
 		ADFF0CCE268E0D2A006246F1 /* TVShowViewCell+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CCD268E0D2A006246F1 /* TVShowViewCell+Layout.swift */; };
-		ADFF0CD1268E0E27006246F1 /* TVShowItemViewPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CD0268E0E27006246F1 /* TVShowItemViewPayload.swift */; };
+		ADFF0CD1268E0E27006246F1 /* TVShowViewCellPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CD0268E0E27006246F1 /* TVShowViewCellPayload.swift */; };
 		ADFF0CD5268E0F45006246F1 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = ADFF0CD4268E0F45006246F1 /* AlamofireImage */; };
 		ADFF0CD8268E1305006246F1 /* BaseTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CD7268E1305006246F1 /* BaseTableAdapter.swift */; };
 		ADFF0CDA268E133A006246F1 /* HomeCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CD9268E133A006246F1 /* HomeCollectionViewAdapter.swift */; };
@@ -111,6 +124,20 @@
 		AD2CD87D268E61DE002BB6F9 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AD2CD87E268E61DE002BB6F9 /* StaticLocalizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = StaticLocalizable.strings; sourceTree = "<group>"; };
 		AD2CD883268E6353002BB6F9 /* TVShowItemViewPayloadMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowItemViewPayloadMapper.swift; sourceTree = "<group>"; };
+		AD2CD885268E7621002BB6F9 /* BaseViewPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewPayload.swift; sourceTree = "<group>"; };
+		AD2CD887268E783A002BB6F9 /* HomeSectionViewPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionViewPayload.swift; sourceTree = "<group>"; };
+		AD2CD88A268E79A7002BB6F9 /* NextPageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextPageViewCell.swift; sourceTree = "<group>"; };
+		AD2CD88C268E79AF002BB6F9 /* NextPageViewCell+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NextPageViewCell+Layout.swift"; sourceTree = "<group>"; };
+		AD2CD88E268E8C7F002BB6F9 /* SkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonView.swift; sourceTree = "<group>"; };
+		AD2CD894268E9956002BB6F9 /* TVShowDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowDetailsViewController.swift; sourceTree = "<group>"; };
+		AD2CD897268E9981002BB6F9 /* TVShowDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowDetailsViewModel.swift; sourceTree = "<group>"; };
+		AD2CD89A268E99F1002BB6F9 /* TVShowDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowDetailsRouter.swift; sourceTree = "<group>"; };
+		AD2CD89C268E9A05002BB6F9 /* TVShowDetailsRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowDetailsRouterImpl.swift; sourceTree = "<group>"; };
+		AD2CD89E268E9A4F002BB6F9 /* TVShowDetailsViewController+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TVShowDetailsViewController+Layout.swift"; sourceTree = "<group>"; };
+		AD2CD8A0268E9A9C002BB6F9 /* TVShowDetailsViewController+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TVShowDetailsViewController+ViewModel.swift"; sourceTree = "<group>"; };
+		AD2CD8A2268E9AEB002BB6F9 /* TVShowDetailsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowDetailsProvider.swift; sourceTree = "<group>"; };
+		AD2CD8A4268F0744002BB6F9 /* ShadowImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowImageView.swift; sourceTree = "<group>"; };
+		ADAA4393268F2B22003B651A /* TitleSubtitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleView.swift; sourceTree = "<group>"; };
 		ADFF0B3C268C5674006246F1 /* TVMaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVMaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADFF0B3F268C5674006246F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADFF0B45268C5675006246F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -172,11 +199,10 @@
 		ADFF0CBB268DDF22006246F1 /* GetTVShowsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTVShowsUseCase.swift; sourceTree = "<group>"; };
 		ADFF0CBE268DE112006246F1 /* GetTVShowsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTVShowsUseCaseTests.swift; sourceTree = "<group>"; };
 		ADFF0CC0268DE1CD006246F1 /* TestSchedulerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSchedulerProvider.swift; sourceTree = "<group>"; };
-		ADFF0CC3268E0B97006246F1 /* CardContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContainerView.swift; sourceTree = "<group>"; };
 		ADFF0CC8268E0BE5006246F1 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		ADFF0CCB268E0D17006246F1 /* TVShowViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowViewCell.swift; sourceTree = "<group>"; };
 		ADFF0CCD268E0D2A006246F1 /* TVShowViewCell+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TVShowViewCell+Layout.swift"; sourceTree = "<group>"; };
-		ADFF0CD0268E0E27006246F1 /* TVShowItemViewPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowItemViewPayload.swift; sourceTree = "<group>"; };
+		ADFF0CD0268E0E27006246F1 /* TVShowViewCellPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowViewCellPayload.swift; sourceTree = "<group>"; };
 		ADFF0CD7268E1305006246F1 /* BaseTableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableAdapter.swift; sourceTree = "<group>"; };
 		ADFF0CD9268E133A006246F1 /* HomeCollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewAdapter.swift; sourceTree = "<group>"; };
 		ADFF0CE1268E177B006246F1 /* UITableViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExt.swift; sourceTree = "<group>"; };
@@ -239,9 +265,63 @@
 		AD2CD882268E633A002BB6F9 /* Payload */ = {
 			isa = PBXGroup;
 			children = (
-				ADFF0CD0268E0E27006246F1 /* TVShowItemViewPayload.swift */,
+				AD2CD887268E783A002BB6F9 /* HomeSectionViewPayload.swift */,
 			);
 			path = Payload;
+			sourceTree = "<group>";
+		};
+		AD2CD889268E7994002BB6F9 /* NextPageViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				AD2CD88A268E79A7002BB6F9 /* NextPageViewCell.swift */,
+				AD2CD88C268E79AF002BB6F9 /* NextPageViewCell+Layout.swift */,
+			);
+			path = NextPageViewCell;
+			sourceTree = "<group>";
+		};
+		AD2CD891268E991D002BB6F9 /* TVShow */ = {
+			isa = PBXGroup;
+			children = (
+				AD2CD892268E992C002BB6F9 /* Details */,
+			);
+			path = TVShow;
+			sourceTree = "<group>";
+		};
+		AD2CD892268E992C002BB6F9 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				AD2CD899268E99E7002BB6F9 /* Router */,
+				AD2CD896268E9975002BB6F9 /* ViewModel */,
+				AD2CD893268E9935002BB6F9 /* View */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		AD2CD893268E9935002BB6F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD2CD894268E9956002BB6F9 /* TVShowDetailsViewController.swift */,
+				AD2CD89E268E9A4F002BB6F9 /* TVShowDetailsViewController+Layout.swift */,
+				AD2CD8A0268E9A9C002BB6F9 /* TVShowDetailsViewController+ViewModel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD2CD896268E9975002BB6F9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AD2CD897268E9981002BB6F9 /* TVShowDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AD2CD899268E99E7002BB6F9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				AD2CD89A268E99F1002BB6F9 /* TVShowDetailsRouter.swift */,
+				AD2CD89C268E9A05002BB6F9 /* TVShowDetailsRouterImpl.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		ADFF0B33268C5673006246F1 = {
@@ -317,6 +397,7 @@
 				ADFF0CC2268E0B88006246F1 /* Components */,
 				ADFF0C02268C8C3D006246F1 /* Extension */,
 				ADFF0C63268CC037006246F1 /* Home */,
+				AD2CD891268E991D002BB6F9 /* TVShow */,
 				ADFF0C26268CA011006246F1 /* Splash */,
 				ADFF0C18268C9A74006246F1 /* Resources */,
 			);
@@ -367,6 +448,7 @@
 				ADFF0BFE268C8B3C006246F1 /* Resource.swift */,
 				ADFF0C7E268D1652006246F1 /* DeviceConstants.swift */,
 				ADFF0CD7268E1305006246F1 /* BaseTableAdapter.swift */,
+				AD2CD885268E7621002BB6F9 /* BaseViewPayload.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -522,6 +604,7 @@
 			children = (
 				ADFF0C53268CADDC006246F1 /* SplashProvider.swift */,
 				ADFF0C66268CC09B006246F1 /* HomeProvider.swift */,
+				AD2CD8A2268E9AEB002BB6F9 /* TVShowDetailsProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -705,8 +788,10 @@
 		ADFF0CC2268E0B88006246F1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				ADFF0CC3268E0B97006246F1 /* CardContainerView.swift */,
 				AD2CD878268E5BB8002BB6F9 /* ShadowContainerView.swift */,
+				AD2CD88E268E8C7F002BB6F9 /* SkeletonView.swift */,
+				AD2CD8A4268F0744002BB6F9 /* ShadowImageView.swift */,
+				ADAA4393268F2B22003B651A /* TitleSubtitleView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -745,6 +830,7 @@
 		ADFF0CCA268E0CF2006246F1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				AD2CD889268E7994002BB6F9 /* NextPageViewCell */,
 				ADFF0CD2268E0E33006246F1 /* TVShowViewCell */,
 			);
 			path = Components;
@@ -755,6 +841,7 @@
 			children = (
 				ADFF0CCB268E0D17006246F1 /* TVShowViewCell.swift */,
 				ADFF0CCD268E0D2A006246F1 /* TVShowViewCell+Layout.swift */,
+				ADFF0CD0268E0E27006246F1 /* TVShowViewCellPayload.swift */,
 			);
 			path = TVShowViewCell;
 			sourceTree = "<group>";
@@ -960,30 +1047,40 @@
 				ADFF0BFF268C8B3C006246F1 /* Resource.swift in Sources */,
 				ADFF0B40268C5674006246F1 /* AppDelegate.swift in Sources */,
 				ADFF0CD8268E1305006246F1 /* BaseTableAdapter.swift in Sources */,
+				AD2CD89F268E9A4F002BB6F9 /* TVShowDetailsViewController+Layout.swift in Sources */,
+				AD2CD89B268E99F1002BB6F9 /* TVShowDetailsRouter.swift in Sources */,
+				AD2CD88D268E79AF002BB6F9 /* NextPageViewCell+Layout.swift in Sources */,
 				ADFF0C05268C8C67006246F1 /* StringExt.swift in Sources */,
 				ADFF0CF5268E206F006246F1 /* ServiceAssemblyModule.swift in Sources */,
 				ADFF0C13268C989D006246F1 /* NetworkAPI.swift in Sources */,
+				AD2CD886268E7621002BB6F9 /* BaseViewPayload.swift in Sources */,
 				ADFF0CE2268E177B006246F1 /* UITableViewExt.swift in Sources */,
 				ADFF0C89268D2974006246F1 /* MazeAPI.swift in Sources */,
 				ADFF0C0B268C8D53006246F1 /* BundleExt.swift in Sources */,
-				ADFF0CC4268E0B97006246F1 /* CardContainerView.swift in Sources */,
 				ADFF0C3C268CA757006246F1 /* SplashViewController+Layout.swift in Sources */,
 				AD2CD884268E6353002BB6F9 /* TVShowItemViewPayloadMapper.swift in Sources */,
+				AD2CD898268E9981002BB6F9 /* TVShowDetailsViewModel.swift in Sources */,
+				AD2CD888268E783A002BB6F9 /* HomeSectionViewPayload.swift in Sources */,
 				ADFF0CF0268E1F24006246F1 /* DomainAssemblyModule.swift in Sources */,
 				ADFF0CB9268DDAB2006246F1 /* TVShowMapper.swift in Sources */,
 				ADFF0C25268C9CAB006246F1 /* EncodableExt.swift in Sources */,
 				ADFF0C67268CC09B006246F1 /* HomeProvider.swift in Sources */,
+				AD2CD8A5268F0744002BB6F9 /* ShadowImageView.swift in Sources */,
 				ADFF0BB6268C836C006246F1 /* QueryUseCase.swift in Sources */,
 				ADFF0C2B268CA06F006246F1 /* SplashRouter.swift in Sources */,
+				AD2CD8A3268E9AEB002BB6F9 /* TVShowDetailsProvider.swift in Sources */,
 				ADFF0C28268CA02B006246F1 /* SplashViewController.swift in Sources */,
-				ADFF0CD1268E0E27006246F1 /* TVShowItemViewPayload.swift in Sources */,
+				ADFF0CD1268E0E27006246F1 /* TVShowViewCellPayload.swift in Sources */,
 				ADFF0CEB268E1CA5006246F1 /* HomeViewController+Layout.swift in Sources */,
 				ADFF0BB9268C8380006246F1 /* DispacherHelper.swift in Sources */,
+				AD2CD88B268E79A7002BB6F9 /* NextPageViewCell.swift in Sources */,
 				ADFF0CED268E1DBD006246F1 /* HomeViewController+ViewModel.swift in Sources */,
+				ADAA4394268F2B22003B651A /* TitleSubtitleView.swift in Sources */,
 				ADFF0CE7268E1BC9006246F1 /* HomeRouter.swift in Sources */,
 				ADFF0C3A268CA6C9006246F1 /* SplashViewController+ViewModel.swift in Sources */,
 				ADFF0BFD268C8ABD006246F1 /* ReactiveValue.swift in Sources */,
 				AD2CD879268E5BB8002BB6F9 /* ShadowContainerView.swift in Sources */,
+				AD2CD8A1268E9A9C002BB6F9 /* TVShowDetailsViewController+ViewModel.swift in Sources */,
 				ADFF0C44268CAA4C006246F1 /* SpacingRule.swift in Sources */,
 				ADFF0C38268CA388006246F1 /* SplashRouterImpl.swift in Sources */,
 				ADFF0C01268C8B86006246F1 /* DomainError.swift in Sources */,
@@ -996,7 +1093,10 @@
 				ADFF0CCE268E0D2A006246F1 /* TVShowViewCell+Layout.swift in Sources */,
 				ADFF0C8B268D2A64006246F1 /* MazeService.swift in Sources */,
 				ADFF0C72268D0D38006246F1 /* UIView+Anchors.swift in Sources */,
+				AD2CD88F268E8C7F002BB6F9 /* SkeletonView.swift in Sources */,
+				AD2CD895268E9956002BB6F9 /* TVShowDetailsViewController.swift in Sources */,
 				ADFF0CF3268E202E006246F1 /* RepositoryAssemblyModule.swift in Sources */,
+				AD2CD89D268E9A05002BB6F9 /* TVShowDetailsRouterImpl.swift in Sources */,
 				ADFF0C61268CBF8F006246F1 /* PresentationAssemblyModule.swift in Sources */,
 				ADFF0CDA268E133A006246F1 /* HomeCollectionViewAdapter.swift in Sources */,
 				ADFF0C6B268CDA15006246F1 /* DependecyInjection.swift in Sources */,

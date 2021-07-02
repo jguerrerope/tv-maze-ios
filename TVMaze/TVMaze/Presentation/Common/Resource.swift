@@ -37,6 +37,8 @@ enum Resource<T> {
                 
             case .notConnection:
                 return Resource<T>.fail("error_no_connection".localized())
+            default:
+                break
             }
         }
         

@@ -2,9 +2,10 @@ import Foundation
 import UIKit
 
 struct AppFont {
+    
     static let montserratSemiBoldSmall = FontSetup.monserrat(.semiBold, .small).font
     static let montserratBoldExtraLarge = FontSetup.monserrat(.bold, .extraLarge).font
-   
+    static let montserratRegularSmall = FontSetup.monserrat(.regular, .small).font
 }
 
 private enum FontSetup {

@@ -34,10 +34,17 @@ extension HomeViewController {
     
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarStyle(prefersLargeTitles: true)
+        self.navigationController?.setNavigationBarStyle()
     }
 }
 
 extension HomeViewController: HomeCollectionViewAdapterDelegate {
     
+    func onTVShowselected(id: String) {
+        viewModel.onTVShowselected(id: id)
+    }
+    
+    func onNextPageReached(id: String) {
+        viewModel.loadNextPage(from: id)
+    }
 }

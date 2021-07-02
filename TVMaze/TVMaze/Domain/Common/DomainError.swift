@@ -6,5 +6,6 @@ public enum GeneralDomainError: DomainError {
     case noFound
     case notConnection
     case notParams
+    case mapping
 }
 

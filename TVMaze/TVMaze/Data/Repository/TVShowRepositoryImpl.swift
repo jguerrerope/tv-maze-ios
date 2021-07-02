@@ -14,7 +14,7 @@ extension TVShowRepositoryImpl: TVShowRepository {
     public func getTVShows(page: Int) -> AnyPublisher<[TVShow], Error> {
         return mazeService.getShows(page: page)
             .map { showTOList in
-                return showTOList.map { $0.toTVShow() }
+                return showTOList.toTVShowList()
             }
             .eraseToAnyPublisher()
     }

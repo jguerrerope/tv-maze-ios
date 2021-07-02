@@ -1,13 +1,13 @@
 import Foundation
 import UIKit
 
-public class HomeProvider: Provider<UINavigationController> {
+public class HomeProvider: ComponentFactoryProvider<UINavigationController> {
     
     init() {
         super.init(type: .weak)
     }
     
-    public override func instance() -> UINavigationController {
+    public override func internalFactory() -> UINavigationController {
         let router = provideRouter()
         let viewModel = provideViewModel()
         let viewController = HomeViewController(viewModel: viewModel, router: router)
@@ -17,7 +17,8 @@ public class HomeProvider: Provider<UINavigationController> {
     
     private func provideRouter() -> HomeRouter {
         return HomeRouterImpl(
-            hostViewControllerProvider: PresentationAssemblyModule.homeProvider
+            hostViewControllerProvider: PresentationAssemblyModule.homeProvider,
+            tvShowDetailsViewControllerProvider: PresentationAssemblyModule.tvShowDetailsProvider
         )
     }
     

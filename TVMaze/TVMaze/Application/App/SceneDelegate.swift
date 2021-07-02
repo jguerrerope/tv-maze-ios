@@ -10,7 +10,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             self.window = PresentationAssemblyModule.windowProvider.instance(param: windowScene)
             
-          
             window?.rootViewController = PresentationAssemblyModule.rootViewController.instance()
             window?.makeKeyAndVisible()
         }

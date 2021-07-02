@@ -1,13 +1,13 @@
 import Foundation
 
-
 extension TVShow {
  
-    func toTVShowItemViewPayload() -> TVShowItemViewPayload {
-        return TVShowItemViewPayload(
+    func toHomeSectionViewPayload() -> HomeSectionViewPayload {
+        return .show(TVShowItemViewPayload(
+            id: self.id,
             title: self.name,
             image: self.image
-        )
+        ))
     }
 }
 

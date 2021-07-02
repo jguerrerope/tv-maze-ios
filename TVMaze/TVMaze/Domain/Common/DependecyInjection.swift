@@ -1,6 +1,5 @@
 import Foundation
 
-// Mark: Provider
 private protocol ProviderParametizable {
     associatedtype Param1
     associatedtype Param2
@@ -87,7 +86,6 @@ public class Provider<T>: ProviderParametizable {
     }
 }
 
-// Mark: Factory Provider
 public class FactoryProvider<T>: Provider<T> {
     public typealias Result = T
     public typealias Param1 = Void
@@ -106,26 +104,6 @@ public class FactoryProvider<T>: Provider<T> {
             return value
         }
         return self.applyInjectionType(factory: self.factory)
-    }
-}
-
-public class ComponentFactoryProvider<T>: Provider<T> {
-    public typealias Result = T
-    public typealias Param1 = Void
-    public typealias Param2 = Void
-    
-    public override func instance() -> T {
-        if let value = getStoredInstance() {
-            return value
-        }
-        
-        return self.applyInjectionType() {
-            internalFactory()
-        }
-    }
-    
-    public func internalFactory() -> T {
-        fatalError("Not implemented.")
     }
 }
 
@@ -150,7 +128,47 @@ public class FactoryProvider1<T, Arg1>: Provider<T> {
             self.factory(param as! Arg1)
         }
     }
+}
+
+public class ComponentFactoryProvider<T>: Provider<T> {
+    public typealias Result = T
+    public typealias Param1 = Void
+    public typealias Param2 = Void
     
+    public override func instance() -> T {
+        if let value = getStoredInstance() {
+            return value
+        }
+        
+        return self.applyInjectionType() {
+            internalFactory()
+        }
+    }
+    
+    public func internalFactory() -> T {
+        fatalError("Not implemented.")
+    }
+}
+
+public class ComponentFactoryProvider1<T, Arg1>: Provider<T> {
+    public typealias Result = T
+    public typealias Param1 = Arg1
+    public typealias Param2 = Void
+    
+    
+    public override func instance(param: Provider<T>.Param1) -> T {
+        if let value = getStoredInstance() {
+            return value
+        }
+        
+        return self.applyInjectionType() {
+            internalFactory(param: param as! Arg1)
+        }
+    }
+    
+    public func internalFactory(param: Arg1) -> T {
+        fatalError("Not implemented.")
+    }
 }
 
 private class Weak<Wrapped> {

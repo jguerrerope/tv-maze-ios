@@ -11,7 +11,6 @@ extension HomeViewController {
     }
     
     private func setupSubviews() {
-       
         view.addSubview(tableView)
     }
     
@@ -26,7 +25,7 @@ extension HomeViewController {
     
     private func setupViewProperties() {
         title = "app_name".localized()
-//        view.backgroundColor = AppColor.white
+        view.backgroundColor = AppColor.midnightBlueDark
     }
 
     private func setupTableViewProperties() {
@@ -35,7 +34,7 @@ extension HomeViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.showsHorizontalScrollIndicator = false
         tableView.showsVerticalScrollIndicator = false
-        tableView.estimatedRowHeight = 360
+        tableView.estimatedRowHeight = 300
         tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: SpacingRule.space28))
         
         adapter.delegate = self

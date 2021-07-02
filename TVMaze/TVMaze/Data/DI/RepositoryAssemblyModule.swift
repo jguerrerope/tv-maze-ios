@@ -7,5 +7,4 @@ public class RepositoryAssemblyModule {
             mazeService: ServiceAssemblyModule.mazeService.instance()
         )
     }
-
 }

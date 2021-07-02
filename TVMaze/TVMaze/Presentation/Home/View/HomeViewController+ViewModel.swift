@@ -17,6 +17,10 @@ extension HomeViewController {
             }
         })
         
+        viewModel.navigateToTVShowDetails.addAndNotify(self, { [weak self] tvShow in
+            self?.router.goToTVShowDetails(show: tvShow)
+        })
+        
         viewModel.setUp()
     }
 }

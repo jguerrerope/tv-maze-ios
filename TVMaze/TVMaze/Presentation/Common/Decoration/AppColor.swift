@@ -7,9 +7,12 @@ struct AppColor {
     static let white = UIColor.white
     static let midnightBlueDark = UIColor(hex: "#22282d")
     static let lightMidnightBlue = UIColor(hex: "#344048")
+    static let sand = UIColor(hex: "#E5E8EB")
     
     static let blackAlpha35 = UIColor.black.withAlphaComponent(0.35)
     static let lightMidnightBlueAlpha35 = lightMidnightBlue.withAlphaComponent(0.35)
+    static let midnightBlueDark70 = midnightBlueDark.withAlphaComponent(0.70)
+    static let sand30 = midnightBlueDark.withAlphaComponent(0.30)
 }
 
 
