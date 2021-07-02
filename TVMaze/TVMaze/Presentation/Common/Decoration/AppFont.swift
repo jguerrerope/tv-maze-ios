@@ -30,7 +30,6 @@ private enum FontSetup {
     }
 }
 
-// Mark: FontBundle
 private class FontBundle {
     
     static var isFontsLoaded: Bool = false
@@ -55,7 +54,6 @@ private class FontBundle {
     }
 }
 
-// Mark: FontSize
 public enum FontSize {
     
     /// Iphone(14.0): IPad(16.0)
@@ -71,7 +69,6 @@ public enum FontSize {
     case large
     
     case extraLarge
-    
     
     var value: CGFloat {
         let isIphone = !DeviceConstants.isIpadOrIpadScreenSize()
@@ -90,8 +87,6 @@ public enum FontSize {
         }
     }
 }
-
-// Mark: FontStyle
 
 public enum FontStyle: CaseIterable {
     case bold

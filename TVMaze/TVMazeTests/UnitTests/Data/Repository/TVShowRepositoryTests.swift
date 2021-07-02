@@ -33,7 +33,7 @@ class TVShowRepositoryTests: XCTestCase {
 
         // when
         let result: [TVShow]? = blockingAndGet(from: sut.getTVShows(page: page))
-
+    
         // then
         XCTAssertNotNil(result)
         XCTAssertEqual(result, tvShowListExpected)
@@ -54,7 +54,11 @@ extension TVShowRepositoryTests {
                 image: TVShowTO.ImageTO(
                     original: "\($0)_image_original",
                     medium: "\($0)_image_medium"
-                )
+                ),
+                rating: TVShowTO.RatingTO(
+                    average: 0.50
+                ),
+                summary: "\($0)_summary"
             )
         }
     }
@@ -64,10 +68,12 @@ extension TVShowRepositoryTests {
             TVShow(
                 id: "\($0)",
                 name: "\($0)_name",
+                image: "\($0)_image_original",
                 type: "\($0)_type",
                 language: "\($0)_language",
                 genres: ["\($0)_genres"],
-                image: "\($0)_image_original"
+                summary: "\($0)_summary",
+                rating: 0.50
             )
         }
     }

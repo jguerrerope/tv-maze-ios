@@ -16,8 +16,6 @@ class ServiceClientStub {
         stub(condition: pathMatches(path) && containsQueryParams(params)) { _ in
             let jsonData = try! readFileFromBudle(fileName: fileName)
             return HTTPStubsResponse(data: jsonData, statusCode: 200, headers: nil)
-            
-//            return fixture(filePath: fileName, status: 200, headers: nil)
         }
     }
     
@@ -27,7 +25,6 @@ class ServiceClientStub {
         stub(condition: pathMatches(path)) { _ in
             let jsonData = try! readFileFromBudle(fileName: fileName)
             return HTTPStubsResponse(data: jsonData, statusCode: 200, headers: nil)
-//            return fixture(filePath: fileName, status: 200, headers: nil)
         }
     }
     
@@ -37,7 +34,6 @@ class ServiceClientStub {
         stub(condition: pathMatches(path) && hasJsonBody(params)) { _ in
             let jsonData = try! readFileFromBudle(fileName: fileName)
             return HTTPStubsResponse(data: jsonData, statusCode: 200, headers: nil)
-//            return fixture(filePath: fileName, status: 200, headers: nil)
         }
     }
     
@@ -50,7 +46,9 @@ class ServiceClientStub {
     }
 }
 
+// MARK: helper methods
 extension ServiceClientStub {
+    
     private static func readFileFromBudle(fileName: String) throws -> Data {
         let path = Bundle(for: ServiceClientStub.self).url(forResource: fileName, withExtension: "json")
         return try! Data(contentsOf: path!, options: Data.ReadingOptions.mappedIfSafe)

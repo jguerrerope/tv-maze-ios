@@ -5,11 +5,19 @@ class HomeViewController: UIViewController {
     let router: HomeRouter
     
     let tableView: UITableView
-    let adapter: HomeCollectionViewAdapter
+   
+    let emptyListContainerView: UIView
+    let emptyListImageView: UIImageView
+    let emptyListMessage: UILabel
+    let adapter: HomeTableViewAdapter
     
     public init(viewModel: HomeViewModel, router: HomeRouter) {
         self.tableView = UITableView()
-        self.adapter = HomeCollectionViewAdapter(tableView: tableView)
+        self.emptyListContainerView = UIView()
+        self.emptyListImageView = UIImageView()
+        self.emptyListMessage = UILabel()
+        
+        self.adapter = HomeTableViewAdapter(tableView: tableView)
         self.viewModel = viewModel
         self.router = router
         super.init(nibName: nil, bundle: nil)
@@ -38,7 +46,7 @@ extension HomeViewController {
     }
 }
 
-extension HomeViewController: HomeCollectionViewAdapterDelegate {
+extension HomeViewController: HomeTableViewAdapterDelegate {
     
     func onTVShowselected(id: String) {
         viewModel.onTVShowselected(id: id)

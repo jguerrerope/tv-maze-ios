@@ -13,7 +13,7 @@ public class PresentationAssemblyModule {
         return UIWindow(windowScene: windowScene)
     }
     
-    // Mark: Feature Providers
+    // MARK: Feature Providers
     public static let splashProvider: Provider<UINavigationController> = SplashProvider()
     public static let homeProvider: Provider<UINavigationController> = HomeProvider()
     public static let tvShowDetailsProvider: Provider<UIViewController> = TVShowDetailsProvider()

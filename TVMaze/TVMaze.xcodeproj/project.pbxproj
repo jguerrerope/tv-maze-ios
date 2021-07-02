@@ -25,6 +25,13 @@
 		AD2CD8A3268E9AEB002BB6F9 /* TVShowDetailsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2CD8A2268E9AEB002BB6F9 /* TVShowDetailsProvider.swift */; };
 		AD2CD8A5268F0744002BB6F9 /* ShadowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2CD8A4268F0744002BB6F9 /* ShadowImageView.swift */; };
 		ADAA4394268F2B22003B651A /* TitleSubtitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA4393268F2B22003B651A /* TitleSubtitleView.swift */; };
+		ADAA4396268F752C003B651A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA4395268F752C003B651A /* main.swift */; };
+		ADAA4398268F760B003B651A /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA4397268F760B003B651A /* TestingAppDelegate.swift */; };
+		ADAA439A268F7B7E003B651A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA4399268F7B7E003B651A /* SceneDelegate.swift */; };
+		ADAA439C268F7BCA003B651A /* TestingSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA439B268F7BCA003B651A /* TestingSceneDelegate.swift */; };
+		ADAA439E268F7FA8003B651A /* XCTest+ReactiveValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA439D268F7FA8003B651A /* XCTest+ReactiveValue.swift */; };
+		ADAA43A2268F8093003B651A /* SplashViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA43A1268F8093003B651A /* SplashViewModelTests.swift */; };
+		ADAA43A5268F8179003B651A /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA43A4268F8179003B651A /* HomeViewModelTests.swift */; };
 		ADFF0B40268C5674006246F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0B3F268C5674006246F1 /* AppDelegate.swift */; };
 		ADFF0B46268C5675006246F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADFF0B45268C5675006246F1 /* Assets.xcassets */; };
 		ADFF0B4C268C5675006246F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADFF0B4A268C5675006246F1 /* LaunchScreen.storyboard */; };
@@ -33,7 +40,6 @@
 		ADFF0BB6268C836C006246F1 /* QueryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0BB5268C836C006246F1 /* QueryUseCase.swift */; };
 		ADFF0BB9268C8380006246F1 /* DispacherHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0BB8268C8380006246F1 /* DispacherHelper.swift */; };
 		ADFF0BBB268C8392006246F1 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0BBA268C8392006246F1 /* UseCase.swift */; };
-		ADFF0BF9268C870E006246F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0BF8268C870E006246F1 /* SceneDelegate.swift */; };
 		ADFF0BFD268C8ABD006246F1 /* ReactiveValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0BFC268C8ABD006246F1 /* ReactiveValue.swift */; };
 		ADFF0BFF268C8B3C006246F1 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0BFE268C8B3C006246F1 /* Resource.swift */; };
 		ADFF0C01268C8B86006246F1 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0C00268C8B86006246F1 /* DomainError.swift */; };
@@ -86,7 +92,7 @@
 		ADFF0CD1268E0E27006246F1 /* TVShowViewCellPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CD0268E0E27006246F1 /* TVShowViewCellPayload.swift */; };
 		ADFF0CD5268E0F45006246F1 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = ADFF0CD4268E0F45006246F1 /* AlamofireImage */; };
 		ADFF0CD8268E1305006246F1 /* BaseTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CD7268E1305006246F1 /* BaseTableAdapter.swift */; };
-		ADFF0CDA268E133A006246F1 /* HomeCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CD9268E133A006246F1 /* HomeCollectionViewAdapter.swift */; };
+		ADFF0CDA268E133A006246F1 /* HomeTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CD9268E133A006246F1 /* HomeTableViewAdapter.swift */; };
 		ADFF0CE2268E177B006246F1 /* UITableViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CE1268E177B006246F1 /* UITableViewExt.swift */; };
 		ADFF0CE5268E1B06006246F1 /* DeepDiff in Frameworks */ = {isa = PBXBuildFile; productRef = ADFF0CE4268E1B06006246F1 /* DeepDiff */; };
 		ADFF0CE7268E1BC9006246F1 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0CE6268E1BC9006246F1 /* HomeRouter.swift */; };
@@ -138,6 +144,13 @@
 		AD2CD8A2268E9AEB002BB6F9 /* TVShowDetailsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowDetailsProvider.swift; sourceTree = "<group>"; };
 		AD2CD8A4268F0744002BB6F9 /* ShadowImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowImageView.swift; sourceTree = "<group>"; };
 		ADAA4393268F2B22003B651A /* TitleSubtitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleView.swift; sourceTree = "<group>"; };
+		ADAA4395268F752C003B651A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		ADAA4397268F760B003B651A /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
+		ADAA4399268F7B7E003B651A /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		ADAA439B268F7BCA003B651A /* TestingSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingSceneDelegate.swift; sourceTree = "<group>"; };
+		ADAA439D268F7FA8003B651A /* XCTest+ReactiveValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTest+ReactiveValue.swift"; sourceTree = "<group>"; };
+		ADAA43A1268F8093003B651A /* SplashViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModelTests.swift; sourceTree = "<group>"; };
+		ADAA43A4268F8179003B651A /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		ADFF0B3C268C5674006246F1 /* TVMaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVMaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADFF0B3F268C5674006246F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADFF0B45268C5675006246F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -152,7 +165,6 @@
 		ADFF0BB5268C836C006246F1 /* QueryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryUseCase.swift; sourceTree = "<group>"; };
 		ADFF0BB8268C8380006246F1 /* DispacherHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispacherHelper.swift; sourceTree = "<group>"; };
 		ADFF0BBA268C8392006246F1 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
-		ADFF0BF8268C870E006246F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ADFF0BFC268C8ABD006246F1 /* ReactiveValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveValue.swift; sourceTree = "<group>"; };
 		ADFF0BFE268C8B3C006246F1 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		ADFF0C00268C8B86006246F1 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
@@ -204,7 +216,7 @@
 		ADFF0CCD268E0D2A006246F1 /* TVShowViewCell+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TVShowViewCell+Layout.swift"; sourceTree = "<group>"; };
 		ADFF0CD0268E0E27006246F1 /* TVShowViewCellPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowViewCellPayload.swift; sourceTree = "<group>"; };
 		ADFF0CD7268E1305006246F1 /* BaseTableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableAdapter.swift; sourceTree = "<group>"; };
-		ADFF0CD9268E133A006246F1 /* HomeCollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewAdapter.swift; sourceTree = "<group>"; };
+		ADFF0CD9268E133A006246F1 /* HomeTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewAdapter.swift; sourceTree = "<group>"; };
 		ADFF0CE1268E177B006246F1 /* UITableViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExt.swift; sourceTree = "<group>"; };
 		ADFF0CE6268E1BC9006246F1 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		ADFF0CE8268E1BD0006246F1 /* HomeRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterImpl.swift; sourceTree = "<group>"; };
@@ -324,6 +336,31 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		ADAA439F268F806A003B651A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				ADAA43A3268F816E003B651A /* Home */,
+				ADAA43A0268F807C003B651A /* Splash */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		ADAA43A0268F807C003B651A /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				ADAA43A1268F8093003B651A /* SplashViewModelTests.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		ADAA43A3268F816E003B651A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				ADAA43A4268F8179003B651A /* HomeViewModelTests.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		ADFF0B33268C5673006246F1 = {
 			isa = PBXGroup;
 			children = (
@@ -353,6 +390,7 @@
 				ADFF0BB0268C8265006246F1 /* Domain */,
 				ADFF0BAF268C8261006246F1 /* Data */,
 				ADFF0B4D268C5675006246F1 /* Info.plist */,
+				ADAA4395268F752C003B651A /* main.swift */,
 			);
 			path = TVMaze;
 			sourceTree = "<group>";
@@ -594,7 +632,7 @@
 			isa = PBXGroup;
 			children = (
 				ADFF0B3F268C5674006246F1 /* AppDelegate.swift */,
-				ADFF0BF8268C870E006246F1 /* SceneDelegate.swift */,
+				ADAA4399268F7B7E003B651A /* SceneDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -681,6 +719,7 @@
 		ADFF0C8C268DA8BB006246F1 /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				ADAA439F268F806A003B651A /* Presentation */,
 				ADFF0CBD268DE0FC006246F1 /* Domain */,
 				ADFF0C91268DB2D3006246F1 /* Data */,
 			);
@@ -692,6 +731,8 @@
 			children = (
 				ADFF0C8F268DAC8D006246F1 /* ServiceClientStub.swift */,
 				ADFF0CC0268DE1CD006246F1 /* TestSchedulerProvider.swift */,
+				ADAA4397268F760B003B651A /* TestingAppDelegate.swift */,
+				ADAA439B268F7BCA003B651A /* TestingSceneDelegate.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -700,6 +741,7 @@
 			isa = PBXGroup;
 			children = (
 				ADFF0C9F268DBC5D006246F1 /* XCTest+Combine.swift */,
+				ADAA439D268F7FA8003B651A /* XCTest+ReactiveValue.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -803,7 +845,7 @@
 				ADFF0C64268CC045006246F1 /* HomeViewController.swift */,
 				ADFF0CEA268E1CA5006246F1 /* HomeViewController+Layout.swift */,
 				ADFF0CEC268E1DBD006246F1 /* HomeViewController+ViewModel.swift */,
-				ADFF0CD9268E133A006246F1 /* HomeCollectionViewAdapter.swift */,
+				ADFF0CD9268E133A006246F1 /* HomeTableViewAdapter.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1028,7 +1070,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/Mock/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PROJECT_DIR}/../Cuckoo/run\" --download generate --testable \\\n\"${PROJECT_NAME}\" --output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Domain/UseCase/QueryUseCase.swift\" \\\n\"${INPUT_DIR}/Domain/Repository/TVShowRepository.swift\" \\\n\"${INPUT_DIR}/Data/Networking/Service/MazeService.swift\"\n\n";
+			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/Mock/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PROJECT_DIR}/../Cuckoo/run\" --download generate --testable \\\n\"${PROJECT_NAME}\" --output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Domain/Common/QueryUseCase.swift\" \\\n\"${INPUT_DIR}/Domain/Repository/TVShowRepository.swift\" \\\n\"${INPUT_DIR}/Data/Networking/Service/MazeService.swift\"\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1039,6 +1081,7 @@
 			files = (
 				ADFF0CA6268DCFC8006246F1 /* TVShow.swift in Sources */,
 				ADFF0C5D268CB46E006246F1 /* DispacherHelperImpl.swift in Sources */,
+				ADAA4396268F752C003B651A /* main.swift in Sources */,
 				ADFF0C7F268D1652006246F1 /* DeviceConstants.swift in Sources */,
 				ADFF0CC9268E0BE5006246F1 /* HomeViewModel.swift in Sources */,
 				ADFF0BBB268C8392006246F1 /* UseCase.swift in Sources */,
@@ -1083,10 +1126,10 @@
 				AD2CD8A1268E9A9C002BB6F9 /* TVShowDetailsViewController+ViewModel.swift in Sources */,
 				ADFF0C44268CAA4C006246F1 /* SpacingRule.swift in Sources */,
 				ADFF0C38268CA388006246F1 /* SplashRouterImpl.swift in Sources */,
+				ADAA439A268F7B7E003B651A /* SceneDelegate.swift in Sources */,
 				ADFF0C01268C8B86006246F1 /* DomainError.swift in Sources */,
 				ADFF0CE9268E1BD0006246F1 /* HomeRouterImpl.swift in Sources */,
 				ADFF0C70268D0A4D006246F1 /* AppColor.swift in Sources */,
-				ADFF0BF9268C870E006246F1 /* SceneDelegate.swift in Sources */,
 				ADFF0C48268CAA66006246F1 /* AppFont.swift in Sources */,
 				ADFF0C75268D1311006246F1 /* UINavigationController+NavigationBar.swift in Sources */,
 				ADFF0CCC268E0D17006246F1 /* TVShowViewCell.swift in Sources */,
@@ -1098,7 +1141,7 @@
 				ADFF0CF3268E202E006246F1 /* RepositoryAssemblyModule.swift in Sources */,
 				AD2CD89D268E9A05002BB6F9 /* TVShowDetailsRouterImpl.swift in Sources */,
 				ADFF0C61268CBF8F006246F1 /* PresentationAssemblyModule.swift in Sources */,
-				ADFF0CDA268E133A006246F1 /* HomeCollectionViewAdapter.swift in Sources */,
+				ADFF0CDA268E133A006246F1 /* HomeTableViewAdapter.swift in Sources */,
 				ADFF0C6B268CDA15006246F1 /* DependecyInjection.swift in Sources */,
 				ADFF0C65268CC045006246F1 /* HomeViewController.swift in Sources */,
 				ADFF0C31268CA1FE006246F1 /* ViewExt.swift in Sources */,
@@ -1115,11 +1158,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADAA4398268F760B003B651A /* TestingAppDelegate.swift in Sources */,
 				ADFF0CA8268DD427006246F1 /* TVShowRepositoryTests.swift in Sources */,
 				ADFF0C95268DB548006246F1 /* ServiceClientStub.swift in Sources */,
 				ADFF0B57268C5675006246F1 /* MazeServiceTests.swift in Sources */,
+				ADAA43A2268F8093003B651A /* SplashViewModelTests.swift in Sources */,
 				ADFF0CA0268DBC5D006246F1 /* XCTest+Combine.swift in Sources */,
 				ADFF0CB3268DD841006246F1 /* GeneratedMocks.swift in Sources */,
+				ADAA43A5268F8179003B651A /* HomeViewModelTests.swift in Sources */,
+				ADAA439C268F7BCA003B651A /* TestingSceneDelegate.swift in Sources */,
+				ADAA439E268F7FA8003B651A /* XCTest+ReactiveValue.swift in Sources */,
 				ADFF0CBF268DE112006246F1 /* GetTVShowsUseCaseTests.swift in Sources */,
 				ADFF0CC1268DE1CD006246F1 /* TestSchedulerProvider.swift in Sources */,
 			);

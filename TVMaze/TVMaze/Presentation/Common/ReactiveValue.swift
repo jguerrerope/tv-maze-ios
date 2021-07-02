@@ -1,6 +1,35 @@
 import Foundation
 
 typealias CompletionHandler<T> = ((T) -> Void)
+typealias OperationExecutor = (() -> Void)
+typealias WokerHandler = ((@escaping OperationExecutor) -> Void)
+
+struct ReactiveCoreUtils {
+    
+    private var operationWokerHandler: WokerHandler = { operationExecutor in
+        DispatchQueue.main.async(execute: operationExecutor)
+    }
+
+    #if DEBUG
+    static var shared = ReactiveCoreUtils()
+    
+    public static func disableDispacher() {
+        shared.operationWokerHandler = { operationExecutor in
+            operationExecutor()
+        }
+    }
+    
+    public static func enabledDisapcher() {
+        shared.operationWokerHandler = { operationExecutor in
+            DispatchQueue.main.async(execute: operationExecutor)
+        }
+    }
+    #endif
+    
+    public static func executeOperation(operation: @escaping OperationExecutor) {
+        shared.operationWokerHandler(operation)
+    }
+}
 
 class ReactiveValue<T> {
     
@@ -17,9 +46,9 @@ class ReactiveValue<T> {
     }
     
     public func postValue(_ newValue: T?) {
-        DispatchQueue.main.async { [weak self] in
+        ReactiveCoreUtils.executeOperation(operation: {  [weak self] in
             self?.value = newValue
-        }
+        })
     }
     
     public func addAndNotify(_ observer: NSObject, _ completionHandler: @escaping CompletionHandler<T>) {

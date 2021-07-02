@@ -1,23 +1,24 @@
 import UIKit
 
-protocol HomeCollectionViewAdapterDelegate: AnyObject {
+protocol HomeTableViewAdapterDelegate: AnyObject {
     
     func onNextPageReached(id: String)
     
     func onTVShowselected(id: String)
 }
 
-class HomeCollectionViewAdapter: BaseTableAdapter<HomeSectionViewPayload> {
+class HomeTableViewAdapter: BaseTableAdapter<HomeSectionViewPayload> {
 
-    weak var delegate: HomeCollectionViewAdapterDelegate?
+    weak var delegate: HomeTableViewAdapterDelegate?
 
     public override init(tableView: UITableView) {
         super.init(tableView: tableView)
         registerCollectionViewCels()
     }
-    
-    deinit {
-        print(String(describing: HomeCollectionViewAdapter.self))
+
+    private func registerCollectionViewCels() {
+        tableView.register(TVShowViewCell.self)
+        tableView.register(NextPageViewCell.self)
     }
     
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,14 +58,6 @@ class HomeCollectionViewAdapter: BaseTableAdapter<HomeSectionViewPayload> {
         default:
             break
         }
-    }
-}
-
-extension HomeCollectionViewAdapter {
-    
-    private func registerCollectionViewCels() {
-        tableView.register(TVShowViewCell.self)
-        tableView.register(NextPageViewCell.self)
     }
 }
 

@@ -73,7 +73,7 @@ extension TitleSubtitleView {
     private func setupTitleLabelProperties() {
         titleLabel.numberOfLines = 1
         titleLabel.textAlignment = .left
-        titleLabel.textColor = AppColor.white
+        titleLabel.textColor = AppColor.sand30
         titleLabel.font = AppFont.montserratRegularSmall
         
         titleLabel.setContentCompressionResistancePriority(UILayoutPriority.defaultHigh + 1, for: .horizontal)

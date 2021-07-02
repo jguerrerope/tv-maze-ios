@@ -44,19 +44,19 @@ class GetTVShowsUseCaseTests: XCTestCase {
     }
 }
 
-
 extension GetTVShowsUseCaseTests {
-
 
     private func createTVShowList(size: Int = 2) -> [TVShow] {
         return (0...size).map {
             TVShow(
                 id: "\($0)",
                 name: "\($0)_name",
+                image: "\($0)_image_original",
                 type: "\($0)_type",
                 language: "\($0)_language",
                 genres: ["\($0)_genres"],
-                image: "\($0)_image_original"
+                summary: "\($0)_summary",
+                rating: 0.50
             )
         }
     }

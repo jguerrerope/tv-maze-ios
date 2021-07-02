@@ -1,26 +1,27 @@
 import Foundation
 
 class HomeViewModel {
-    private static let defaultNextPageId = "DEFAULT_ID"
+    public static let defaultNextPageId = "DEFAULT_ID"
     
     private let getTVShowsUseCase: QueryUseCase<GetTVShowsUseCaseParams, [TVShow]>
     
     let homeItems = ReactiveValue<Resource<[HomeSectionViewPayload]>>()
     let navigateToTVShowDetails = ReactiveValue<TVShow>()
+    let showEmptyListMessage = ReactiveValue<Bool>(false)
     
-    private var currentTvShowList: [TVShow] = []
+    private var currentTVShowList: [TVShow] = []
     private var currentPage: Int = 0
     private var currentNextPageId: String? = nil
-  
+    
     init(getTVShowsUseCase: QueryUseCase<GetTVShowsUseCaseParams, [TVShow]>) {
         self.getTVShowsUseCase = getTVShowsUseCase
     }
     
     func setUp() {
-        currentTvShowList = []
+        currentTVShowList = []
         currentPage = 0
         currentNextPageId = nil
-        homeItems.value = Resource.success([.nextPage(HomeViewModel.defaultNextPageId)] )
+        homeItems.value = Resource.success([.nextPage(HomeViewModel.defaultNextPageId)])
     }
     
     func loadNextPage(from lastIdSeen: String) {
@@ -34,21 +35,22 @@ class HomeViewModel {
         
         self.currentNextPageId = lastIdSeen
         currentPage += 1
-     
-        loadTvShows()
+        
+        loadTVShows()
     }
     
     func onTVShowselected(id: String){
-        guard let tvShow = currentTvShowList.first(where: { $0.id == id }) else {
+        guard let tvShow = currentTVShowList.first(where: { $0.id == id }) else {
             return
         }
         navigateToTVShowDetails.value = tvShow
     }
 }
 
+// MARK: Helper methods
 extension HomeViewModel {
     
-    private func loadTvShows() {
+    private func loadTVShows() {
         homeItems.value = Resource.loading()
         getTVShowsUseCase.execute(
             params: GetTVShowsUseCaseParams(page: self.currentPage),
@@ -56,21 +58,27 @@ extension HomeViewModel {
                 self.updateHomeItemsWithNewPage(tvShowList)
             },
             onError: { error in
-                print(error)
+                self.updateHomeItemsWithNewPage([])
             }
         )
     }
     
     private func updateHomeItemsWithNewPage(_ newTvShowList: [TVShow]) {
-        self.currentTvShowList += newTvShowList
-        let tvShowItems = self.currentTvShowList.map { $0.toHomeSectionViewPayload() }
+        self.currentTVShowList += newTvShowList
+        
+        let tvShowItems = self.currentTVShowList.toHomeSectionViewPayloadList()
         
         if !newTvShowList.isEmpty {
+            showEmptyListMessage.value = false
             let latIdToSeen = newTvShowList.last?.id ?? HomeViewModel.defaultNextPageId
-            homeItems.value = Resource.success(tvShowItems + [.nextPage(latIdToSeen)] )
+            homeItems.postValue(Resource.success(tvShowItems + [.nextPage(latIdToSeen)]))
             
         } else {
-            homeItems.value = Resource.success(tvShowItems)
+            if tvShowItems.isEmpty {
+                showEmptyListMessage.value = true
+            }
+            
+            homeItems.postValue(Resource.success(tvShowItems))
         }
     }
 }
