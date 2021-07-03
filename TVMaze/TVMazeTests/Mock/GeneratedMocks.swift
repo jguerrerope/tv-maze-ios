@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: TVMaze/Data/Networking/Service/MazeService.swift at 2021-07-02 20:35:38 +0000
+// MARK: - Mocks generated from file: TVMaze/Data/Networking/Service/MazeService.swift at 2021-07-03 08:52:28 +0000
 
 
 import Cuckoo
@@ -159,7 +159,7 @@ import Foundation
 }
 
 
-// MARK: - Mocks generated from file: TVMaze/Domain/Common/QueryUseCase.swift at 2021-07-02 20:35:38 +0000
+// MARK: - Mocks generated from file: TVMaze/Domain/Common/QueryUseCase.swift at 2021-07-03 08:52:28 +0000
 
 
 import Cuckoo
@@ -289,7 +289,7 @@ public class QueryUseCaseStub<P: UseCaseParams, R>: QueryUseCase<P, R> {
 }
 
 
-// MARK: - Mocks generated from file: TVMaze/Domain/Repository/TVShowRepository.swift at 2021-07-02 20:35:38 +0000
+// MARK: - Mocks generated from file: TVMaze/Domain/Repository/TVShowRepository.swift at 2021-07-03 08:52:28 +0000
 
 
 import Cuckoo

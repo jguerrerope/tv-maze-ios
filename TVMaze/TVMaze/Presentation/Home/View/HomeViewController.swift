@@ -30,19 +30,23 @@ class HomeViewController: UIViewController {
     deinit {
         print(#function, String(describing: HomeViewController.self))
     }
-}
-
-extension HomeViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setupViewModel()
+        setupAccessibilityIdentifier()
     }
     
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarStyle()
+    }
+    
+    private func setupAccessibilityIdentifier() {
+        #if DEBUG
+        view.accessibilityIdentifier = "HomeScreen"
+        #endif
     }
 }
 

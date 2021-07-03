@@ -45,10 +45,17 @@ class TVShowDetailsViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         setupViewModel()
+        setupAccessibilityIdentifier()
     }
     
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarStyle(prefersLargeTitles: true)
+    }
+    
+    private func setupAccessibilityIdentifier() {
+        #if DEBUG
+        view.accessibilityIdentifier = "TVShowDetailsScreen"
+        #endif
     }
 }
