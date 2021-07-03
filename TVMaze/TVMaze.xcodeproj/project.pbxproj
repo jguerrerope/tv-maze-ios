@@ -38,6 +38,7 @@
 		ADAA43BC268FCC3D003B651A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD2CD87B268E61DE002BB6F9 /* Localizable.strings */; };
 		ADAA43BD268FCC40003B651A /* StaticLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD2CD87E268E61DE002BB6F9 /* StaticLocalizable.strings */; };
 		ADAA43BE268FCC46003B651A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADFF0B45268C5675006246F1 /* Assets.xcassets */; };
+		ADDFBA3426930A7D0041D1F4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = ADDFBA3326930A7D0041D1F4 /* README.md */; };
 		ADFF0B40268C5674006246F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0B3F268C5674006246F1 /* AppDelegate.swift */; };
 		ADFF0B46268C5675006246F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADFF0B45268C5675006246F1 /* Assets.xcassets */; };
 		ADFF0B4C268C5675006246F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADFF0B4A268C5675006246F1 /* LaunchScreen.storyboard */; };
@@ -159,7 +160,7 @@
 		ADAA43B0268FBED8003B651A /* TVShowFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowFeature.swift; sourceTree = "<group>"; };
 		ADAA43B2268FBF77003B651A /* TVShowSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowSteps.swift; sourceTree = "<group>"; };
 		ADAA43B7268FC54D003B651A /* TVShowScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowScreen.swift; sourceTree = "<group>"; };
-		ADAA43BF2690DF2F003B651A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		ADDFBA3326930A7D0041D1F4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		ADFF0B3C268C5674006246F1 /* TVMaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVMaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADFF0B3F268C5674006246F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADFF0B45268C5675006246F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -398,7 +399,7 @@
 		ADFF0B33268C5673006246F1 = {
 			isa = PBXGroup;
 			children = (
-				ADAA43BF2690DF2F003B651A /* README.md */,
+				ADDFBA3326930A7D0041D1F4 /* README.md */,
 				ADFF0B3E268C5674006246F1 /* TVMaze */,
 				ADFF0B55268C5675006246F1 /* TVMazeTests */,
 				ADFF0B60268C5675006246F1 /* TVMazeUITests */,
@@ -1067,6 +1068,7 @@
 				ADFF0B46268C5675006246F1 /* Assets.xcassets in Resources */,
 				ADFF0CF6268E319E006246F1 /* Montserrat-Bold.ttf in Resources */,
 				AD2CD880268E61DE002BB6F9 /* StaticLocalizable.strings in Resources */,
+				ADDFBA3426930A7D0041D1F4 /* README.md in Resources */,
 				ADFF0CF8268E31A2006246F1 /* Montserrat-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
