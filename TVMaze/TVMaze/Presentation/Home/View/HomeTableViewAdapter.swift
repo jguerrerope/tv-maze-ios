@@ -4,7 +4,7 @@ protocol HomeTableViewAdapterDelegate: AnyObject {
     
     func onNextPageReached(id: String)
     
-    func onTVShowselected(id: String)
+    func onTVShowTapped(id: String)
 }
 
 class HomeTableViewAdapter: BaseTableAdapter<HomeSectionViewPayload> {
@@ -32,11 +32,21 @@ class HomeTableViewAdapter: BaseTableAdapter<HomeSectionViewPayload> {
             let cell: TVShowViewCell = tableView.dequeueReusableCell(for: indexPath)
             cell.configure(payload: payload)
             cell.selectionStyle = .none
+            
+            #if DEBUG
+            cell.accessibilityIdentifier = "tvShowCell_\(indexPath.item)"
+            cell.isAccessibilityElement = true
+            #endif
             return cell
             
         case .nextPage:
             let cell: NextPageViewCell = tableView.dequeueReusableCell(for: indexPath)
             cell.selectionStyle = .none
+            
+            #if DEBUG
+            cell.accessibilityIdentifier = "nextPageCell"
+            cell.isAccessibilityElement = true
+            #endif
             return cell
         }
     }
@@ -54,7 +64,7 @@ class HomeTableViewAdapter: BaseTableAdapter<HomeSectionViewPayload> {
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch dataSource[indexPath.item] {
         case .show(let payload):
-            delegate?.onTVShowselected(id: payload.id)
+            delegate?.onTVShowTapped(id: payload.id)
         default:
             break
         }

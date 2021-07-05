@@ -66,7 +66,6 @@ public class Provider<T>: ProviderParametizable {
                 return value
             }
             
-            
             let newValue = factory()
             let newWeakWrapper = Weak<T>()
             newWeakWrapper.value = newValue
@@ -82,7 +81,7 @@ public class Provider<T>: ProviderParametizable {
         } else if let value = storedValueWeak?.value {
             return value
         }
-        return nil
+        return .none
     }
 }
 
@@ -176,7 +175,7 @@ private class Weak<Wrapped> {
 
     var value: Wrapped? {
         get {
-            guard let object = object else { return nil }
+            guard let object = object else { return .none }
             return object as? Wrapped
         }
         set { object = newValue as AnyObject? }

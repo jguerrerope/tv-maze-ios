@@ -13,13 +13,4 @@ extension Encodable {
             return [:]
         }
     }
-    
-    func asJSONString() -> String {
-        do {
-            let jsonData = try JSONEncoder().encode(self)
-            return String(data: jsonData, encoding: String.Encoding.utf16) ?? ""
-        } catch {
-            return ""
-        }
-    }
 }

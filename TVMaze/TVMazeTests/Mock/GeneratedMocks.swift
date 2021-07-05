@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: TVMaze/Data/Networking/Service/MazeService.swift at 2021-07-03 08:52:28 +0000
+// MARK: - Mocks generated from file: TVMaze/Data/Networking/Service/MazeService.swift at 2021-07-05 15:27:23 +0000
 
 
 import Cuckoo
@@ -159,7 +159,7 @@ import Foundation
 }
 
 
-// MARK: - Mocks generated from file: TVMaze/Domain/Common/QueryUseCase.swift at 2021-07-03 08:52:28 +0000
+// MARK: - Mocks generated from file: TVMaze/Domain/Common/QueryUseCase.swift at 2021-07-05 15:27:23 +0000
 
 
 import Cuckoo
@@ -209,16 +209,16 @@ public class MockQueryUseCase<P: UseCaseParams, R>: QueryUseCase<P, R>, Cuckoo.C
     
     
     
-    public override func execute(params: P?, delayInSeconds: Int?, onSuccess: ((R) -> Void)?, onError: ((Swift.Error) -> Void)?, onFinished: (() -> Void)?)  {
+    public override func execute(params: P?, delayInMillis: Int?, onSuccess: ((R) -> Void)?, onError: ((Swift.Error) -> Void)?, onFinished: (() -> Void)?)  {
         
-    return cuckoo_manager.call("execute(params: P?, delayInSeconds: Int?, onSuccess: ((R) -> Void)?, onError: ((Swift.Error) -> Void)?, onFinished: (() -> Void)?)",
-            parameters: (params, delayInSeconds, onSuccess, onError, onFinished),
-            escapingParameters: (params, delayInSeconds, onSuccess, onError, onFinished),
+    return cuckoo_manager.call("execute(params: P?, delayInMillis: Int?, onSuccess: ((R) -> Void)?, onError: ((Swift.Error) -> Void)?, onFinished: (() -> Void)?)",
+            parameters: (params, delayInMillis, onSuccess, onError, onFinished),
+            escapingParameters: (params, delayInMillis, onSuccess, onError, onFinished),
             superclassCall:
                 
-                super.execute(params: params, delayInSeconds: delayInSeconds, onSuccess: onSuccess, onError: onError, onFinished: onFinished)
+                super.execute(params: params, delayInMillis: delayInMillis, onSuccess: onSuccess, onError: onError, onFinished: onFinished)
                 ,
-            defaultCall: __defaultImplStub!.execute(params: params, delayInSeconds: delayInSeconds, onSuccess: onSuccess, onError: onError, onFinished: onFinished))
+            defaultCall: __defaultImplStub!.execute(params: params, delayInMillis: delayInMillis, onSuccess: onSuccess, onError: onError, onFinished: onFinished))
         
     }
     
@@ -236,9 +236,9 @@ public class MockQueryUseCase<P: UseCaseParams, R>: QueryUseCase<P, R>, Cuckoo.C
 	        return .init(stub: cuckoo_manager.createStub(for: MockQueryUseCase.self, method: "build(params: P?) -> AnyPublisher<R, Error>", parameterMatchers: matchers))
 	    }
 	    
-	    func execute<M1: Cuckoo.OptionalMatchable, M2: Cuckoo.OptionalMatchable, M3: Cuckoo.OptionalMatchable, M4: Cuckoo.OptionalMatchable, M5: Cuckoo.OptionalMatchable>(params: M1, delayInSeconds: M2, onSuccess: M3, onError: M4, onFinished: M5) -> Cuckoo.ClassStubNoReturnFunction<(P?, Int?, ((R) -> Void)?, ((Swift.Error) -> Void)?, (() -> Void)?)> where M1.OptionalMatchedType == P, M2.OptionalMatchedType == Int, M3.OptionalMatchedType == ((R) -> Void), M4.OptionalMatchedType == ((Swift.Error) -> Void), M5.OptionalMatchedType == (() -> Void) {
-	        let matchers: [Cuckoo.ParameterMatcher<(P?, Int?, ((R) -> Void)?, ((Swift.Error) -> Void)?, (() -> Void)?)>] = [wrap(matchable: params) { $0.0 }, wrap(matchable: delayInSeconds) { $0.1 }, wrap(matchable: onSuccess) { $0.2 }, wrap(matchable: onError) { $0.3 }, wrap(matchable: onFinished) { $0.4 }]
-	        return .init(stub: cuckoo_manager.createStub(for: MockQueryUseCase.self, method: "execute(params: P?, delayInSeconds: Int?, onSuccess: ((R) -> Void)?, onError: ((Swift.Error) -> Void)?, onFinished: (() -> Void)?)", parameterMatchers: matchers))
+	    func execute<M1: Cuckoo.OptionalMatchable, M2: Cuckoo.OptionalMatchable, M3: Cuckoo.OptionalMatchable, M4: Cuckoo.OptionalMatchable, M5: Cuckoo.OptionalMatchable>(params: M1, delayInMillis: M2, onSuccess: M3, onError: M4, onFinished: M5) -> Cuckoo.ClassStubNoReturnFunction<(P?, Int?, ((R) -> Void)?, ((Swift.Error) -> Void)?, (() -> Void)?)> where M1.OptionalMatchedType == P, M2.OptionalMatchedType == Int, M3.OptionalMatchedType == ((R) -> Void), M4.OptionalMatchedType == ((Swift.Error) -> Void), M5.OptionalMatchedType == (() -> Void) {
+	        let matchers: [Cuckoo.ParameterMatcher<(P?, Int?, ((R) -> Void)?, ((Swift.Error) -> Void)?, (() -> Void)?)>] = [wrap(matchable: params) { $0.0 }, wrap(matchable: delayInMillis) { $0.1 }, wrap(matchable: onSuccess) { $0.2 }, wrap(matchable: onError) { $0.3 }, wrap(matchable: onFinished) { $0.4 }]
+	        return .init(stub: cuckoo_manager.createStub(for: MockQueryUseCase.self, method: "execute(params: P?, delayInMillis: Int?, onSuccess: ((R) -> Void)?, onError: ((Swift.Error) -> Void)?, onFinished: (() -> Void)?)", parameterMatchers: matchers))
 	    }
 	    
 	}
@@ -264,9 +264,9 @@ public class MockQueryUseCase<P: UseCaseParams, R>: QueryUseCase<P, R>, Cuckoo.C
 	    }
 	    
 	    @discardableResult
-	    func execute<M1: Cuckoo.OptionalMatchable, M2: Cuckoo.OptionalMatchable, M3: Cuckoo.OptionalMatchable, M4: Cuckoo.OptionalMatchable, M5: Cuckoo.OptionalMatchable>(params: M1, delayInSeconds: M2, onSuccess: M3, onError: M4, onFinished: M5) -> Cuckoo.__DoNotUse<(P?, Int?, ((R) -> Void)?, ((Swift.Error) -> Void)?, (() -> Void)?), Void> where M1.OptionalMatchedType == P, M2.OptionalMatchedType == Int, M3.OptionalMatchedType == ((R) -> Void), M4.OptionalMatchedType == ((Swift.Error) -> Void), M5.OptionalMatchedType == (() -> Void) {
-	        let matchers: [Cuckoo.ParameterMatcher<(P?, Int?, ((R) -> Void)?, ((Swift.Error) -> Void)?, (() -> Void)?)>] = [wrap(matchable: params) { $0.0 }, wrap(matchable: delayInSeconds) { $0.1 }, wrap(matchable: onSuccess) { $0.2 }, wrap(matchable: onError) { $0.3 }, wrap(matchable: onFinished) { $0.4 }]
-	        return cuckoo_manager.verify("execute(params: P?, delayInSeconds: Int?, onSuccess: ((R) -> Void)?, onError: ((Swift.Error) -> Void)?, onFinished: (() -> Void)?)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	    func execute<M1: Cuckoo.OptionalMatchable, M2: Cuckoo.OptionalMatchable, M3: Cuckoo.OptionalMatchable, M4: Cuckoo.OptionalMatchable, M5: Cuckoo.OptionalMatchable>(params: M1, delayInMillis: M2, onSuccess: M3, onError: M4, onFinished: M5) -> Cuckoo.__DoNotUse<(P?, Int?, ((R) -> Void)?, ((Swift.Error) -> Void)?, (() -> Void)?), Void> where M1.OptionalMatchedType == P, M2.OptionalMatchedType == Int, M3.OptionalMatchedType == ((R) -> Void), M4.OptionalMatchedType == ((Swift.Error) -> Void), M5.OptionalMatchedType == (() -> Void) {
+	        let matchers: [Cuckoo.ParameterMatcher<(P?, Int?, ((R) -> Void)?, ((Swift.Error) -> Void)?, (() -> Void)?)>] = [wrap(matchable: params) { $0.0 }, wrap(matchable: delayInMillis) { $0.1 }, wrap(matchable: onSuccess) { $0.2 }, wrap(matchable: onError) { $0.3 }, wrap(matchable: onFinished) { $0.4 }]
+	        return cuckoo_manager.verify("execute(params: P?, delayInMillis: Int?, onSuccess: ((R) -> Void)?, onError: ((Swift.Error) -> Void)?, onFinished: (() -> Void)?)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
 	    }
 	    
 	}
@@ -282,14 +282,14 @@ public class QueryUseCaseStub<P: UseCaseParams, R>: QueryUseCase<P, R> {
         return DefaultValueRegistry.defaultValue(for: (AnyPublisher<R, Error>).self)
     }
     
-    public override func execute(params: P?, delayInSeconds: Int?, onSuccess: ((R) -> Void)?, onError: ((Swift.Error) -> Void)?, onFinished: (() -> Void)?)   {
+    public override func execute(params: P?, delayInMillis: Int?, onSuccess: ((R) -> Void)?, onError: ((Swift.Error) -> Void)?, onFinished: (() -> Void)?)   {
         return DefaultValueRegistry.defaultValue(for: (Void).self)
     }
     
 }
 
 
-// MARK: - Mocks generated from file: TVMaze/Domain/Repository/TVShowRepository.swift at 2021-07-03 08:52:28 +0000
+// MARK: - Mocks generated from file: TVMaze/Domain/Repository/TVShowRepository.swift at 2021-07-05 15:27:23 +0000
 
 
 import Cuckoo

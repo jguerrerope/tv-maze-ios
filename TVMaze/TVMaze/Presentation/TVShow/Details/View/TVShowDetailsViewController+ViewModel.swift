@@ -8,8 +8,6 @@ extension TVShowDetailsViewController {
         viewModel.tvShow.addAndNotify(self, { [weak self] tvShow in
             self?.bindTVShow(tvShow)
         })
-    
-        viewModel.setUp()
     }
     
     private func bindTVShow(_ tvShow: TVShow) {

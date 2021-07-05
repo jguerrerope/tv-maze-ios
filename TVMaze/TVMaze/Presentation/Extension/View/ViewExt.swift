@@ -2,6 +2,7 @@ import Foundation
 import UIKit
 
 extension UIView {
+    
     class func identifier() -> String {
         return String(describing: self)
     }

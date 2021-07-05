@@ -2,6 +2,7 @@ import Foundation
 
 class HomeViewModel {
     public static let defaultNextPageId = "DEFAULT_ID"
+    private static let defaultDebounceCallInMills = 300
     
     private let getTVShowsUseCase: QueryUseCase<GetTVShowsUseCaseParams, [TVShow]>
     
@@ -11,17 +12,22 @@ class HomeViewModel {
     
     private var currentTVShowList: [TVShow] = []
     private var currentPage: Int = 0
-    private var currentNextPageId: String? = nil
+    private var currentNextPageId: String? = .none
     
-    init(getTVShowsUseCase: QueryUseCase<GetTVShowsUseCaseParams, [TVShow]>) {
+    private var debounceCallInMills: Int
+    
+    init(debounceCallInMills: Int = HomeViewModel.defaultDebounceCallInMills,
+         getTVShowsUseCase: QueryUseCase<GetTVShowsUseCaseParams, [TVShow]>) {
+        self.debounceCallInMills = debounceCallInMills
         self.getTVShowsUseCase = getTVShowsUseCase
     }
     
     func setUp() {
         currentTVShowList = []
         currentPage = 0
-        currentNextPageId = nil
+        currentNextPageId = .none
         homeItems.value = Resource.success([.nextPage(HomeViewModel.defaultNextPageId)])
+        showEmptyListMessage.value = false
     }
     
     func loadNextPage(from lastIdSeen: String) {
@@ -36,7 +42,7 @@ class HomeViewModel {
         self.currentNextPageId = lastIdSeen
         currentPage += 1
         
-        loadTVShows()
+        loadTVShows(isFirstTime: lastIdSeen == HomeViewModel.defaultNextPageId)
     }
     
     func onTVShowselected(id: String){
@@ -50,10 +56,11 @@ class HomeViewModel {
 // MARK: Helper methods
 extension HomeViewModel {
     
-    private func loadTVShows() {
+    private func loadTVShows(isFirstTime: Bool = false) {
         homeItems.value = Resource.loading()
         getTVShowsUseCase.execute(
             params: GetTVShowsUseCaseParams(page: self.currentPage),
+            delayInMillis: isFirstTime ? debounceCallInMills : .none,
             onSuccess: { [unowned self] tvShowList in
                 self.updateHomeItemsWithNewPage(tvShowList)
             },
@@ -76,9 +83,10 @@ extension HomeViewModel {
         } else {
             if tvShowItems.isEmpty {
                 showEmptyListMessage.value = true
+                homeItems.postValue(Resource.failUnknown())
+            } else {
+                homeItems.postValue(Resource.success(tvShowItems))
             }
-            
-            homeItems.postValue(Resource.success(tvShowItems))
         }
     }
 }

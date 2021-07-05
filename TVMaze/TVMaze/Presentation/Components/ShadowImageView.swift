@@ -10,14 +10,14 @@ class ShadowImageView: UIView {
             if let value = imageUrl, let url = URL(string: value) {
                 imageView.af.setImage(withURL: url, imageTransition: .crossDissolve(0.2))
             } else {
-                imageView.image = nil
+                imageView.image = .none
             }
         }
     }
     
     var roundCorners: Bool
 
-    public init(roundCorners: Bool = false) {
+    public init(roundCorners: Bool = true) {
         self.roundCorners = roundCorners
         self.imageView = UIImageView()
         self.darkAlphaView = UIView()

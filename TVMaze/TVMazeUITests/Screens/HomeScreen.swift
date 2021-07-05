@@ -1,18 +1,19 @@
-
 import Foundation
 import XCTest
 
 @testable import TVMaze
 
 class HomeScreen : BaseScreen {
-    private static let homeScreen =  "HomeScreen"
-
+    private static let homeScreen = "HomeScreen"
+    private static let tvShowCell = "tvShowCell_0"
+    
     func isPresent() {
-        waitForOtherElementsPresent(screenId: HomeScreen.homeScreen, timeout: 5)
+        waitForOtherElementsPresent(screenId: HomeScreen.homeScreen)
     }
     
     func tapOnTVShow() -> TVShowScreen {
-        tapOnCellByPosition(position: 3)
+        waitForCellPresent(screenId: HomeScreen.tvShowCell)
+        tapOnCell(screenId: HomeScreen.tvShowCell)
         return TVShowScreen()
     }
 }

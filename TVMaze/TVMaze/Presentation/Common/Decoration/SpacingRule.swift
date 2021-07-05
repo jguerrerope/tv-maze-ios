@@ -4,15 +4,8 @@ import UIKit
 public struct SpacingRule {
     
     // MARK: - Default size
-   
-    /// 8.0
     static let defaultRadius: CGFloat = 8.0
-    
-    /// 10.0
     static let defaultCardRadius: CGFloat = 10.0
-
-    
-    /// 2.0
     static var dividerSize: CGFloat  = 2.0
     
     // MARK: - Spaces

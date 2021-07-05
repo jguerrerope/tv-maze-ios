@@ -14,5 +14,4 @@ extension Bundle {
     static var module: Bundle {
         return ModuleBundle.bundle() ?? .main
     }
-
 }

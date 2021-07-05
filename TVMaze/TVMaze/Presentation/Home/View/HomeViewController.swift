@@ -8,14 +8,16 @@ class HomeViewController: UIViewController {
    
     let emptyListContainerView: UIView
     let emptyListImageView: UIImageView
-    let emptyListMessage: UILabel
+    let emptyListMessageLabel: UILabel
+    let emptyListTryAgainLabel: UILabel
     let adapter: HomeTableViewAdapter
     
     public init(viewModel: HomeViewModel, router: HomeRouter) {
         self.tableView = UITableView()
         self.emptyListContainerView = UIView()
         self.emptyListImageView = UIImageView()
-        self.emptyListMessage = UILabel()
+        self.emptyListMessageLabel = UILabel()
+        self.emptyListTryAgainLabel = UILabel()
         
         self.adapter = HomeTableViewAdapter(tableView: tableView)
         self.viewModel = viewModel
@@ -43,6 +45,11 @@ class HomeViewController: UIViewController {
         self.navigationController?.setNavigationBarStyle()
     }
     
+    @objc
+    func onTryAgainTapped(_ sender: UITapGestureRecognizer? = nil) {
+        viewModel.setUp()
+    }
+    
     private func setupAccessibilityIdentifier() {
         #if DEBUG
         view.accessibilityIdentifier = "HomeScreen"
@@ -52,7 +59,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: HomeTableViewAdapterDelegate {
     
-    func onTVShowselected(id: String) {
+    func onTVShowTapped(id: String) {
         viewModel.onTVShowselected(id: id)
     }
     

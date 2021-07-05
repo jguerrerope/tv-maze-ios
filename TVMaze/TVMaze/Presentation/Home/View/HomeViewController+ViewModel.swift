@@ -12,8 +12,9 @@ extension HomeViewController {
             case .success(let items):
                 self?.adapter.update(items)
                 
-            case .fail:
-                break
+            case .fail(let message):
+                self?.adapter.clear()
+                self?.showToast(message: message)
             }
         })
         
@@ -30,6 +31,20 @@ extension HomeViewController {
     
     private func showEmpyListMessage(show: Bool) {
         self.emptyListContainerView.isHidden = !show
+    }
+    
+    private func showToast(message: String) {
+        let alert = UIAlertController(title: .none, message: message, preferredStyle: .alert)
+        alert.view.backgroundColor = .black
+        alert.view.alpha = 0.5
+        alert.view.layer.cornerRadius = 15
+        
+        present(alert, animated: true)
+    
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            alert.dismiss(animated: true)
+        }
     }
 }
 

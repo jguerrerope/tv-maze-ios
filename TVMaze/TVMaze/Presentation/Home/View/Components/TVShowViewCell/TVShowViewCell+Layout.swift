@@ -6,18 +6,12 @@ extension TVShowViewCell {
         setupSubviews()
         setupConstraints()
         setupViewProperties()
-        //        setupdarkAlphaViewProperties()
-        //        setupShowImageViewProperties()
         setupTitleLabelProperties()
     }
     
-    
     private func setupSubviews() {
         contentView.addSubview(containerView)
-        
-        //        containerView.addSubview(showImageView)
-        //        containerView.addSubview(darkAlphaView)
-        
+
         containerView.addSubview(shadowImageView)
         containerView.addSubview(titleLabel)
     }
@@ -38,9 +32,10 @@ extension TVShowViewCell {
         shadowImageView.anchor(
             top: containerView.topAnchor,
             topConstant: SpacingRule.space8,
-            heightConstant: 250
+            width: contentView.widthAnchor,
+            widthMultiplier: 0.9
         )
-        shadowImageView.equalWidthToHeight(multiplier: 1.5)
+        shadowImageView.equalHeightToWidth(multiplier: 0.6)
         shadowImageView.anchorCenterToView(containerView)
         
         titleLabel.anchor(
@@ -70,7 +65,5 @@ extension TVShowViewCell {
         super.prepareForReuse()
         shadowImageView.imageUrl = .none
         titleLabel.text = ""
-        
-        accessibilityIdentifier = nil
     }
 }

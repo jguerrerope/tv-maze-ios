@@ -7,7 +7,4 @@ class TVShowDetailsViewModel {
     init(tvShow: TVShow) {
         self.tvShow.value = tvShow
     }
-    
-    func setUp() {
-    }
 }

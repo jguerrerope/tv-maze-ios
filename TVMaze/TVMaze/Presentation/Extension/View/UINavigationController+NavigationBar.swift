@@ -8,6 +8,7 @@ extension UINavigationController {
         navigationBar.backIndicatorImage = UIImage(named: "whiteBackIcon")?.withRenderingMode(.alwaysOriginal)
         navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "whiteBackIcon")?.withRenderingMode(.alwaysOriginal)
         navigationBar.tintColor = UIColor.white
+    
         
         // common
         navigationBar.isTranslucent = true
@@ -15,11 +16,12 @@ extension UINavigationController {
         navigationBar.shadowImage = UIImage()
         navigationBar.barStyle = .default
         navigationBar.titleTextAttributes = [.foregroundColor: AppColor.white]
+        navigationBar.largeTitleTextAttributes = [.foregroundColor: AppColor.white]
         setNavigationBarHidden(hidden, animated: animated)
      
         navigationBar.prefersLargeTitles = prefersLargeTitles
+        
         if prefersLargeTitles {
-            navigationItem.largeTitleDisplayMode = .never
             navigationItem.largeTitleDisplayMode = .always
         }
     }

@@ -6,7 +6,6 @@ enum HomeSectionViewPayload {
     case nextPage(String)
 }
 
-
 extension HomeSectionViewPayload: Equatable {
     
     public static func == (lhs: HomeSectionViewPayload, rhs: HomeSectionViewPayload) -> Bool {
@@ -20,7 +19,6 @@ extension HomeSectionViewPayload: Equatable {
         return true
     }
 }
-
 
 extension HomeSectionViewPayload: DiffAware {
     public typealias DiffId = String

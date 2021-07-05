@@ -11,16 +11,11 @@ extension TVShow {
     }
 }
 
-
 extension Array where Element == TVShow {
     
     func toHomeSectionViewPayloadList() -> [HomeSectionViewPayload] {
         return self.compactMap {
-            do {
-                return try $0.toHomeSectionViewPayload()
-            } catch {
-                return nil
-            }
+            $0.toHomeSectionViewPayload()
         }
     }
 }

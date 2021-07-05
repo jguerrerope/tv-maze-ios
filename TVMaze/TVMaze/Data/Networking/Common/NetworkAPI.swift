@@ -1,7 +1,6 @@
 import Foundation
 import Combine
 
-
 class NetworkService<API: NetworkAPI>: NSObject, URLSessionTaskDelegate {
     
     private enum RequestType: String {
@@ -82,9 +81,9 @@ extension NetworkService {
     }
     
     private func execute<T: Decodable>(_ urlRequest: URLRequest) -> AnyPublisher<T, Error> {
-        return URLSession.shared.dataTaskPublisher(for: urlRequest)
+        return createSession().dataTaskPublisher(for: urlRequest)
             .tryMap { result -> T in
-                let value = try JSONDecoder().decode(T.self, from: result.data) // 4
+                let value = try JSONDecoder().decode(T.self, from: result.data)
                 return value
             }
             .eraseToAnyPublisher()
@@ -92,5 +91,15 @@ extension NetworkService {
     
     private func createHeaders() -> [String: Any] {
         return [:]
+    }
+    
+    private func createSession() -> URLSession {
+        let config = URLSessionConfiguration.default
+        config.requestCachePolicy = .reloadIgnoringLocalCacheData
+        config.urlCache = .none
+
+        let session = URLSession(configuration: config)
+        
+        return session
     }
 }

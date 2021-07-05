@@ -4,6 +4,7 @@ import UIKit
 struct AppFont {
     
     static let montserratSemiBoldSmall = FontSetup.monserrat(.semiBold, .small).font
+    static let montserratSemiBoldMedium = FontSetup.monserrat(.semiBold, .medium).font
     static let montserratBoldExtraLarge = FontSetup.monserrat(.bold, .extraLarge).font
     static let montserratRegularSmall = FontSetup.monserrat(.regular, .small).font
 }
@@ -65,9 +66,10 @@ public enum FontSize {
     /// Iphone(18.0): IPad(24.0)
     case medium
     
-    /// Iphone(24.0.0): IPad(32.0.0)
+    /// Iphone(20.0.0): IPad(26.0.0)
     case large
     
+    /// Iphone(24.0.0): IPad(32.0.0)
     case extraLarge
     
     var value: CGFloat {

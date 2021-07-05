@@ -2,10 +2,6 @@ import UIKit
 
 extension NextPageViewCell {
     
-    private var indicatorSize: CGFloat {
-        return 250
-    }
-    
     func setupUI() {
         setupSubviews()
         setupConstraints()
@@ -18,17 +14,7 @@ extension NextPageViewCell {
     }
     
     private func setupConstraints() {
-        containerView.anchor(
-            top: contentView.topAnchor,
-            left: contentView.leftAnchor,
-            right: contentView.rightAnchor
-        )
-        
-        let bottomConstraint = containerView.bottomAnchor.constraint(
-            equalTo: contentView.bottomAnchor
-        )
-        bottomConstraint.priority = .defaultLow
-        bottomConstraint.isActive = true
+        containerView.fillView(contentView)
         
         indicatorView.anchor(
             top: containerView.topAnchor,

@@ -11,13 +11,12 @@ class HomeViewModelTests: XCTestCase {
     private var sut: HomeViewModel!
     
     override func setUp() {
-        ReactiveCoreUtils.disableDispacher()
-        
         mockGetTVShowsUseCase = MockQueryUseCase(
             dispacherHelper: TestDispacherHelperImpl()
         )
         
         sut = HomeViewModel(
+            debounceCallInMills: 0,
             getTVShowsUseCase: mockGetTVShowsUseCase
         )
     }
@@ -28,11 +27,15 @@ class HomeViewModelTests: XCTestCase {
         
         // when
         sut.setUp()
-        let result: [HomeSectionViewPayload]? =  blockingAndGetResource(from: sut.homeItems)
+        let itemResult: [HomeSectionViewPayload]? =  blockingAndGetResource(from: sut.homeItems)
+        let showEmptyListMessageResult: Bool? =  blockingAndGet(from: sut.showEmptyListMessage)
         
         // then
-        XCTAssertNotNil(result)
-        XCTAssertEqual(homeItemsExpected, result)
+        XCTAssertNotNil(itemResult)
+        XCTAssertEqual(homeItemsExpected, itemResult)
+        
+        XCTAssertNotNil(showEmptyListMessageResult)
+        XCTAssertEqual(showEmptyListMessageResult, false)
     }
     
     func test_should_User_see_TVShowList() {
@@ -53,7 +56,7 @@ class HomeViewModelTests: XCTestCase {
             
             when(stub.execute(
                 params: any(),
-                delayInSeconds: any(),
+                delayInMillis: any(),
                 onSuccess: any(),
                 onError: any(),
                 onFinished: any()
@@ -87,7 +90,7 @@ class HomeViewModelTests: XCTestCase {
             
             when(stub.execute(
                 params: any(),
-                delayInSeconds: any(),
+                delayInMillis: any(),
                 onSuccess: any(),
                 onError: any(),
                 onFinished: any()
@@ -139,7 +142,7 @@ class HomeViewModelTests: XCTestCase {
             
             when(stub.execute(
                 params: any(),
-                delayInSeconds: any(),
+                delayInMillis: any(),
                 onSuccess: any(),
                 onError: any(),
                 onFinished: any()

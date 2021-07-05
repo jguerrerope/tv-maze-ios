@@ -12,7 +12,7 @@ class TVShowFeature: XCTestCase {
         homeSteps = HomeSteps()
     }
     
-    func test_should_User_see_TVShow_details() throws {
+    func test_TVShow_details() throws {
         homeSteps.i_see_tvshow_list()
         homeSteps.i_open_tvshow_details()
     }

@@ -60,6 +60,7 @@ extension TitleSubtitleView {
             top: topAnchor,
             left: leftAnchor
         )
+        titleLabel.setContentCompressionResistancePriority(UILayoutPriority.defaultHigh + 1, for: .horizontal)
         
         subtitleLabel.anchor(
             top: topAnchor,
@@ -73,10 +74,8 @@ extension TitleSubtitleView {
     private func setupTitleLabelProperties() {
         titleLabel.numberOfLines = 1
         titleLabel.textAlignment = .left
-        titleLabel.textColor = AppColor.sand30
+        titleLabel.textColor = AppColor.sand
         titleLabel.font = AppFont.montserratRegularSmall
-        
-        titleLabel.setContentCompressionResistancePriority(UILayoutPriority.defaultHigh + 1, for: .horizontal)
     }
     
     private func setupSubtitleLabelProperties() {

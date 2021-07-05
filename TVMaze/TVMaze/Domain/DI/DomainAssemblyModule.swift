@@ -1,7 +1,6 @@
 import Foundation
 import UIKit
 
-
 public typealias UseCaseProvider<Param: UseCaseParams, Result> = Provider<QueryUseCase<Param, Result>>
 
 public class DomainAssemblyModule {

@@ -9,7 +9,8 @@ extension HomeViewController {
         setupViewProperties()
         setupTableViewProperties()
         setupEmptyListImageViewProperties()
-        setupEmptyListMessageProperties()
+        setupEmptyListMessageLabelProperties()
+        setupEmptyListTryAgainLabelProperties()
     }
     
     private func setupSubviews() {
@@ -17,7 +18,8 @@ extension HomeViewController {
         view.addSubview(emptyListContainerView)
         
         emptyListContainerView.addSubview(emptyListImageView)
-        emptyListContainerView.addSubview(emptyListMessage)
+        emptyListContainerView.addSubview(emptyListMessageLabel)
+        emptyListContainerView.addSubview(emptyListTryAgainLabel)
     }
     
     private func setupConstraints() {
@@ -42,10 +44,18 @@ extension HomeViewController {
         emptyListImageView.equalHeightToWidth(multiplier: 0.8)
         emptyListImageView.anchorCenterToView(emptyListContainerView)
         
-        emptyListMessage.anchor(
+        emptyListMessageLabel.anchor(
             top: emptyListImageView.bottomAnchor,
             left: emptyListContainerView.leftAnchor,
             right: emptyListContainerView.rightAnchor
+        )
+        
+        emptyListTryAgainLabel.anchor(
+            top: emptyListMessageLabel.bottomAnchor,
+            left: emptyListContainerView.leftAnchor,
+            right: emptyListContainerView.rightAnchor,
+            topConstant: SpacingRule.space24,
+            heightConstant: SpacingRule.space44
         )
     }
     
@@ -63,6 +73,7 @@ extension HomeViewController {
         tableView.showsVerticalScrollIndicator = false
         tableView.estimatedRowHeight = 300
         tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: SpacingRule.space28))
+        tableView.backgroundColor = AppColor.midnightBlueDark
         
         adapter.delegate = self
     }
@@ -72,12 +83,23 @@ extension HomeViewController {
         emptyListImageView.contentMode = .scaleAspectFit
     }
     
-    private func setupEmptyListMessageProperties() {
-        emptyListMessage.numberOfLines = 0
-        emptyListMessage.textAlignment = .center
-        emptyListMessage.textColor = AppColor.sand
-        emptyListMessage.font = AppFont.montserratRegularSmall
-        emptyListMessage.text = "tv_show_list_empty".localized()
+    private func setupEmptyListMessageLabelProperties() {
+        emptyListMessageLabel.numberOfLines = 0
+        emptyListMessageLabel.textAlignment = .center
+        emptyListMessageLabel.textColor = AppColor.sand
+        emptyListMessageLabel.font = AppFont.montserratRegularSmall
+        emptyListMessageLabel.text = "tv_show_list_empty".localized()
+    }
+    
+    private func setupEmptyListTryAgainLabelProperties() {
+        emptyListTryAgainLabel.numberOfLines = 0
+        emptyListTryAgainLabel.textAlignment = .center
+        emptyListTryAgainLabel.textColor = AppColor.sand
+        emptyListTryAgainLabel.font = AppFont.montserratSemiBoldMedium
+        emptyListTryAgainLabel.text = "tv_show_list_try_again".localized()
+        
+        emptyListTryAgainLabel.isUserInteractionEnabled = true
+        emptyListTryAgainLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onTryAgainTapped)))
     }
 }
 

@@ -56,7 +56,7 @@ extension XCTestCase {
     
     func blockingAndIgnoreResource<T>(
         from reactiveValue: ReactiveValue<Resource<T>>,
-        timeout: TimeInterval = 1,
+        timeout: TimeInterval = 3,
         file: StaticString = #file,
         line: UInt = #line
     ) {
@@ -73,7 +73,7 @@ extension XCTestCase {
     
     func blockingAndIgnore<T>(
         from reactiveValue: ReactiveValue<T>,
-        timeout: TimeInterval = 1,
+        timeout: TimeInterval = 3,
         file: StaticString = #file,
         line: UInt = #line
     ) {

@@ -42,6 +42,10 @@ class BaseTableAdapter<T: DiffAware>: NSObject, UITableViewDataSource, UITableVi
         update(copyDataSource)
     }
     
+    public func clear() {
+        update([])
+    }
+    
     public func numberOfSections(in tableView: UITableView) -> Int {
         if dataSource.isEmpty {
             return 0

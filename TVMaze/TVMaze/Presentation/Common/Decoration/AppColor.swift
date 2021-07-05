@@ -5,6 +5,7 @@ struct AppColor {
     
     static let clear = UIColor.clear
     static let white = UIColor.white
+    static let black = UIColor.black
     static let midnightBlueDark = UIColor(hex: "#22282d")
     static let lightMidnightBlue = UIColor(hex: "#344048")
     static let sand = UIColor(hex: "#E5E8EB")

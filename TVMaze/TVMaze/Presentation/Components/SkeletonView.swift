@@ -6,7 +6,7 @@ public class SkeletonView: UIView {
     private var startLocations: [NSNumber] = [-1.0, -0.5, 0.0]
     private var endLocations: [NSNumber] = [1.0, 1.5, 2.0]
     
-    private var gradientBackgroundColor: CGColor = AppColor.midnightBlueDark70.cgColor
+    private var gradientBackgroundColor: CGColor = AppColor.lightMidnightBlue.cgColor
     private var gradientMovingColor: CGColor = AppColor.sand30.cgColor
     
     private var movingAnimationDuration: CFTimeInterval = 0.8

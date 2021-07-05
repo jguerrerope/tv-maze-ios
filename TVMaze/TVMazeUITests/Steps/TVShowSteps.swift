@@ -16,7 +16,7 @@ class HomeSteps {
         }
     }
     
-    /// I tap on TVShow endLess scrolling
+    /// I tap on TVShow
     func i_open_tvshow_details() {
         XCTContext.runActivity(named: "I open TVShow details") { _ in
             let screen = homeScreen.tapOnTVShow()

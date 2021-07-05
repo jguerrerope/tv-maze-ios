@@ -102,6 +102,7 @@ extension TVShowDetailsViewController {
     
     private func setupViewProperties() {
         view.backgroundColor = AppColor.midnightBlueDark
+        containerView.backgroundColor = AppColor.midnightBlueDark
     }
     
     private func setupScrollViewProperties() {

@@ -4,7 +4,6 @@ import UIKit
 extension SplashViewController {
     
     func setupUI() {
-        view.backgroundColor = AppColor.midnightBlueDark
         setupSubviews()
         setupConstraints()
         setupProperties()
@@ -23,6 +22,7 @@ extension SplashViewController {
     }
     
     private func setupProperties() {
+        view.backgroundColor = AppColor.midnightBlueDark
         iconImageView.image = UIImage(named: "splash")
     }
 }

@@ -19,7 +19,7 @@ public class QueryUseCase<P: UseCaseParams, R>: UseCase<P, AnyPublisher<R, Error
     }
     
     public func execute(params: P? = nil,
-                        delayInSeconds: Int? = nil,
+                        delayInMillis: Int? = nil,
                         onSuccess: ((R) -> Void)? = nil,
                         onError: ((Swift.Error) -> Void)? = nil,
                         onFinished: (() -> Void)? = nil) {
@@ -27,7 +27,7 @@ public class QueryUseCase<P: UseCaseParams, R>: UseCase<P, AnyPublisher<R, Error
         cancellable?.cancel()
         
         cancellable = build(params: params)
-            .delay(for: .seconds(delayInSeconds ?? 0), scheduler: DispatchQueue.global())
+            .delay(for: .milliseconds(delayInMillis ?? 0), scheduler: DispatchQueue.global())
             .subscribe(on: self.dispacherHelper.io())
             .receive(on: self.dispacherHelper.main())
             .sink(receiveCompletion: { completion in

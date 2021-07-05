@@ -4,4 +4,3 @@ protocol SplashRouter {
     
     func goToHome()
 }
-

@@ -1,7 +1,6 @@
 import UIKit
 import Foundation
 
-
 extension SplashViewController {
     
     func setupViewModel() {

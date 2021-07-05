@@ -25,6 +25,7 @@ extension TVShowViewCell {
     func configure(payload: TVShowItemViewPayload) {
         titleLabel.text = payload.title
         shadowImageView.imageUrl = payload.image
+        
         self.layoutIfNeeded()
     }
 }

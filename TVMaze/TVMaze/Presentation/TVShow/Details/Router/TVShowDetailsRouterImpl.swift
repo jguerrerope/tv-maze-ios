@@ -8,6 +8,10 @@ class TVShowDetailsRouterImpl {
     init(hostViewControllerProvider: Provider<UIViewController>) {
         self.hostViewControllerProvider = hostViewControllerProvider
     }
+    
+    deinit {
+        print(#function, String(describing: TVShowDetailsRouterImpl.self))
+    }
 }
 
 extension TVShowDetailsRouterImpl: TVShowDetailsRouter {
